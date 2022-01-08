@@ -4,12 +4,14 @@ const footer = document.getElementById("site-footer");
 //Create Elements
 const navBar = document.createElement("nav");
 const titleElement = document.createElement("h1");
+const mainContent = document.createElement("div");
 const article = document.createElement("article");
 const footerContent = document.createElement("div");
 
 
 navBar.setAttribute("id", "navBar");
 titleElement.setAttribute("id", "siteTitle");
+mainContent.setAttribute("id", "main-content");
 article.setAttribute("id", "article-content");
 footerContent.setAttribute("id", "footer-content");
 
@@ -24,6 +26,7 @@ navBar.innerHTML = `
 </ul>
 `;
 titleElement.innerHTML = "Hello World!";
+mainContent.innerHTML = `<p>Main Content Area</p>`;
 article.innerHTML = `
 <ul><p>Article Area</p>
 <li>Featured Article
@@ -55,5 +58,6 @@ footerContent.innerHTML =`
 
 header.append(navBar);
 main.append(titleElement);
+main.append(mainContent);
 main.append(article);
 footer.append(footerContent);
