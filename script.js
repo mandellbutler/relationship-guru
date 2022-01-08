@@ -9,6 +9,9 @@ const descriptionSection = document.createElement("section");
 const titleElement = document.createElement("h1");
 const descriptionEl = document.createElement("p");
 const mainContainer = document.createElement("div");
+const imageSection = document.createElement("section");
+const mainImg = document.createElement("img");
+const mainP = document.createElement("p");
 const articleContainer = document.createElement("div");
 const footerContent = document.createElement("div");
 
@@ -24,6 +27,9 @@ descriptionEl.setAttribute("id", "site-description");
 
 mainContainer.setAttribute("id", "mainContainer");
 mainContainer.setAttribute("class", "containers");
+imageSection.setAttribute("id", "imageSection")
+mainImg.setAttribute("src", "#");
+mainImg.setAttribute("alt", "jazzy kissy face emoji");
 articleContainer.setAttribute("id", "articleContainer");
 articleContainer.setAttribute("class", "containers");
 footerContent.setAttribute("id", "footer-content");
@@ -39,7 +45,12 @@ navBar.innerHTML = `
 `;
 titleElement.innerHTML = "Building Lasting Relationships!";
 descriptionEl.innerHTML = "lorenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus."
-mainContainer.innerHTML = `<p>Main Content Area</p>`;
+mainP.innerHTML = `
+orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.
+orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.
+orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.
+orenLorem ipsum dolor
+`;
 articleContainer.innerHTML = `
 <ul><p>Article Area</p>
 <li>Featured Article
@@ -76,5 +87,8 @@ descriptionSection.append(titleElement);
 descriptionSection.append(descriptionEl);
 navContainer.append(navBar);
 main.append(mainContainer);
+mainContainer.append(imageSection);
+imageSection.append(mainImg);
+imageSection.append(mainP);
 main.append(articleContainer);
 footer.append(footerContent);
