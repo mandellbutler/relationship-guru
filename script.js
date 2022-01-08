@@ -15,6 +15,7 @@ const mainP = document.createElement("p");
 const selectSection = document.createElement("section");
 const selectLabel = document.createElement("label");
 const mainSelect = document.createElement("select");
+const contactSection = document.createElement("section");
 const articleContainer = document.createElement("div");
 const footerContent = document.createElement("div");
 
@@ -36,6 +37,8 @@ mainImg.setAttribute("alt", "jazzy kissy face emoji");
 selectSection.setAttribute("id", "selectSection");
 selectLabel.setAttribute("for", "contacts");
 mainSelect.setAttribute("name", "contacts");
+contactSection.setAttribute("id", "contactSection");
+contactSection.setAttribute("class", "contact-cards");
 
 articleContainer.setAttribute("id", "articleContainer");
 articleContainer.setAttribute("class", "containers");
@@ -108,5 +111,6 @@ imageSection.append(mainP);
 mainContainer.append(selectSection);
 selectSection.append(selectLabel);
 selectSection.append(mainSelect);
+mainContainer.append(contactSection);
 main.append(articleContainer);
 footer.append(footerContent);
