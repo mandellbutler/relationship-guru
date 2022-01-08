@@ -18,3 +18,15 @@
     padding: 2px;
     margin: 8em 2em 2em;
 }
+
+#siteTitle {
+    display: flex;
+    justify-content: center;
+}
+
+/* ==========MAIN============ */
+main {
+    display: flex;
+    flex-direction: row;
+    margin: 1em 2em 2em;
+}
