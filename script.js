@@ -32,7 +32,7 @@ descriptionEl.setAttribute("id", "site-description");
 mainContainer.setAttribute("id", "mainContainer");
 mainContainer.setAttribute("class", "containers");
 imageSection.setAttribute("id", "imageSection")
-mainImg.setAttribute("src", "#");
+mainImg.setAttribute("src", "./assets/images/relationship.jpg");
 mainImg.setAttribute("alt", "jazzy kissy face emoji");
 selectSection.setAttribute("id", "selectSection");
 selectLabel.setAttribute("for", "contacts");

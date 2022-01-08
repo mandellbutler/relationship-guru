@@ -30,3 +30,8 @@ main {
     flex-direction: row;
     margin: 1em 2em 2em;
 }
+
+img {
+    height: 250px;
+    width: 250px;
+}
