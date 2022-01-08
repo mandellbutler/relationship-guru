@@ -12,3 +12,9 @@
     justify-content: space-around;
     /* background-color: black; */
 }
+
+/* Title/Description */
+#descriptionContainer {
+    padding: 2px;
+    margin: 8em 2em 2em;
+}
