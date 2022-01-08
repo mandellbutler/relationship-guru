@@ -2,3 +2,13 @@
     border: solid 1px red;
     box-sizing: border-box;
 }
+
+/* ==========HEADER============ */
+/* Navbar */
+#navbar {
+    padding: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    /* background-color: black; */
+}

@@ -9,7 +9,7 @@ const article = document.createElement("article");
 const footerContent = document.createElement("div");
 
 
-navBar.setAttribute("id", "navBar");
+navBar.setAttribute("id", "navbar");
 titleElement.setAttribute("id", "siteTitle");
 mainContent.setAttribute("id", "main-content");
 article.setAttribute("id", "article-content");
@@ -19,11 +19,9 @@ footerContent.setAttribute("id", "footer-content");
 
 
 navBar.innerHTML = `
-<ul><p>Navigation Area</p>
-<li>Home</li>
-<li>About</li>
-<li>Contact Us</li>
-</ul>
+<a href="#">Home</a>
+<a href="#">About</a>
+<a href="#">Contact Us</a>
 `;
 titleElement.innerHTML = "Hello World!";
 mainContent.innerHTML = `<p>Main Content Area</p>`;
