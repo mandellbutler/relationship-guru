@@ -8,8 +8,8 @@ const descriptionContainer = document.createElement("div");
 const descriptionSection = document.createElement("section");
 const titleElement = document.createElement("h1");
 const descriptionEl = document.createElement("p");
-const mainContent = document.createElement("div");
-const article = document.createElement("article");
+const mainContainer = document.createElement("div");
+const articleContainer = document.createElement("div");
 const footerContent = document.createElement("div");
 
 //BUILDING ELEMENTS
@@ -22,8 +22,10 @@ descriptionSection.setAttribute("id", "desciptionSection");
 titleElement.setAttribute("id", "siteTitle");
 descriptionEl.setAttribute("id", "site-description");
 
-mainContent.setAttribute("id", "main-content");
-article.setAttribute("id", "article-content");
+mainContainer.setAttribute("id", "mainContainer");
+mainContainer.setAttribute("class", "containers");
+articleContainer.setAttribute("id", "articleContainer");
+articleContainer.setAttribute("class", "containers");
 footerContent.setAttribute("id", "footer-content");
 
 
@@ -37,8 +39,8 @@ navBar.innerHTML = `
 `;
 titleElement.innerHTML = "Building Lasting Relationships!";
 descriptionEl.innerHTML = "lorenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus."
-mainContent.innerHTML = `<p>Main Content Area</p>`;
-article.innerHTML = `
+mainContainer.innerHTML = `<p>Main Content Area</p>`;
+articleContainer.innerHTML = `
 <ul><p>Article Area</p>
 <li>Featured Article
 <h2>Title</h2>
@@ -73,6 +75,6 @@ descriptionContainer.append(descriptionSection);
 descriptionSection.append(titleElement);
 descriptionSection.append(descriptionEl);
 navContainer.append(navBar);
-main.append(mainContent);
-main.append(article);
+main.append(mainContainer);
+main.append(articleContainer);
 footer.append(footerContent);
