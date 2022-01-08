@@ -1,16 +1,17 @@
 const header = document.getElementById("site-header");
 const main = document.getElementById("site-main");
-
-
+const footer = document.getElementById("site-footer");
 //Create Elements
 const navBar = document.createElement("nav");
 const titleElement = document.createElement("h1");
 const article = document.createElement("article");
+const footerContent = document.createElement("div");
 
 
 navBar.setAttribute("id", "navBar");
 titleElement.setAttribute("id", "siteTitle");
-article.setAttribute("id", "article-content")
+article.setAttribute("id", "article-content");
+footerContent.setAttribute("id", "footer-content");
 
 
 
@@ -42,9 +43,17 @@ orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Ne
 <li>Another Placeholder</li>
 </ul>
 `
+footerContent.innerHTML =`
+<ul><p>Footer Content Area</p>
+<li>Terms of Use</li>
+<li>Careers</li>
+<li>Another Placeholder</li>
+</ul>
+`
 
 
 
 header.append(navBar);
 main.append(titleElement);
 main.append(article);
+footer.append(footerContent);
