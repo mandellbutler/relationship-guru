@@ -12,6 +12,9 @@ const mainContainer = document.createElement("div");
 const imageSection = document.createElement("section");
 const mainImg = document.createElement("img");
 const mainP = document.createElement("p");
+const selectSection = document.createElement("section");
+const selectLabel = document.createElement("label");
+const mainSelect = document.createElement("select");
 const articleContainer = document.createElement("div");
 const footerContent = document.createElement("div");
 
@@ -30,6 +33,10 @@ mainContainer.setAttribute("class", "containers");
 imageSection.setAttribute("id", "imageSection")
 mainImg.setAttribute("src", "#");
 mainImg.setAttribute("alt", "jazzy kissy face emoji");
+selectSection.setAttribute("id", "selectSection");
+selectLabel.setAttribute("for", "contacts");
+mainSelect.setAttribute("name", "contacts");
+
 articleContainer.setAttribute("id", "articleContainer");
 articleContainer.setAttribute("class", "containers");
 footerContent.setAttribute("id", "footer-content");
@@ -51,6 +58,14 @@ orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Ne
 orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.
 orenLorem ipsum dolor
 `;
+
+selectLabel.innerHTML = "Connect With Your Loved Ones Now!:"
+mainSelect.innerHTML = `
+<option value="none">--Choose Contact--</option>
+<option value="all">All</option>
+`
+
+
 articleContainer.innerHTML = `
 <ul><p>Article Area</p>
 <li>Featured Article
@@ -90,5 +105,8 @@ main.append(mainContainer);
 mainContainer.append(imageSection);
 imageSection.append(mainImg);
 imageSection.append(mainP);
+mainContainer.append(selectSection);
+selectSection.append(selectLabel);
+selectSection.append(mainSelect);
 main.append(articleContainer);
 footer.append(footerContent);
