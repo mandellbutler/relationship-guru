@@ -2,14 +2,20 @@ const header = document.getElementById("site-header");
 const main = document.getElementById("site-main");
 const footer = document.getElementById("site-footer");
 //Create Elements
+const navContainer = document.createElement("div");
 const navBar = document.createElement("nav");
+const descriptionContainer = document.createElement("div");
 const titleElement = document.createElement("h1");
 const mainContent = document.createElement("div");
 const article = document.createElement("article");
 const footerContent = document.createElement("div");
 
-
+navContainer.setAttribute("id", "navContainer");
+navContainer.setAttribute("class", "containers");
 navBar.setAttribute("id", "navbar");
+descriptionContainer.setAttribute("id", "descriptionContainer");
+descriptionContainer.setAttribute("class", "containers");
+
 titleElement.setAttribute("id", "siteTitle");
 mainContent.setAttribute("id", "main-content");
 article.setAttribute("id", "article-content");
@@ -21,7 +27,8 @@ footerContent.setAttribute("id", "footer-content");
 navBar.innerHTML = `
 <a href="#">Home</a>
 <a href="#">About</a>
-<a href="#">Contact Us</a>
+<a href="#">Contacts</a>
+<a href="#">Login</a>
 `;
 titleElement.innerHTML = "Hello World!";
 mainContent.innerHTML = `<p>Main Content Area</p>`;
@@ -54,8 +61,10 @@ footerContent.innerHTML =`
 
 
 
-header.append(navBar);
-main.append(titleElement);
+header.append(navContainer);
+header.append(descriptionContainer);
+descriptionContainer.append(titleElement);
+navContainer.append(navBar);
 main.append(mainContent);
 main.append(article);
 footer.append(footerContent);
