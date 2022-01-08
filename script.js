@@ -1,24 +1,27 @@
 const header = document.getElementById("site-header");
 const main = document.getElementById("site-main");
 const footer = document.getElementById("site-footer");
-//Create Elements
+//CREATING ELEMENTS
 const navContainer = document.createElement("div");
 const navBar = document.createElement("nav");
 const descriptionContainer = document.createElement("div");
-const descriptionEl = document.createElement("p");
+const descriptionSection = document.createElement("section");
 const titleElement = document.createElement("h1");
+const descriptionEl = document.createElement("p");
 const mainContent = document.createElement("div");
 const article = document.createElement("article");
 const footerContent = document.createElement("div");
 
+//BUILDING ELEMENTS
 navContainer.setAttribute("id", "navContainer");
 navContainer.setAttribute("class", "containers");
 navBar.setAttribute("id", "navbar");
 descriptionContainer.setAttribute("id", "descriptionContainer");
 descriptionContainer.setAttribute("class", "containers");
+descriptionSection.setAttribute("id", "desciptionSection");
+titleElement.setAttribute("id", "siteTitle");
 descriptionEl.setAttribute("id", "site-description");
 
-titleElement.setAttribute("id", "siteTitle");
 mainContent.setAttribute("id", "main-content");
 article.setAttribute("id", "article-content");
 footerContent.setAttribute("id", "footer-content");
@@ -63,11 +66,12 @@ footerContent.innerHTML =`
 `
 
 
-//Placing Elements
+//PLACING ELEMENTS
 header.append(navContainer);
 header.append(descriptionContainer);
-descriptionContainer.append(titleElement);
-descriptionContainer.append(descriptionEl);
+descriptionContainer.append(descriptionSection);
+descriptionSection.append(titleElement);
+descriptionSection.append(descriptionEl);
 navContainer.append(navBar);
 main.append(mainContent);
 main.append(article);
