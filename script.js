@@ -53,16 +53,16 @@ navBar.innerHTML = `
 <a href="#">Contacts</a>
 <a href="#">Login</a>
 `;
-titleElement.innerHTML = "Building Lasting Relationships!";
-descriptionEl.innerHTML = "lorenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus."
-mainP.innerHTML = `
+titleElement.innerText = "Building Lasting Relationships!";
+descriptionEl.innerText = "lorenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus."
+mainP.innerText = `
 orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.
 orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.
 orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.
 orenLorem ipsum dolor
 `;
 
-selectLabel.innerHTML = "Connect With Your Loved Ones Now!:"
+selectLabel.innerText = "Connect With Your Loved Ones Now:"
 mainSelect.innerHTML = `
 <option value="none">--Choose Contact--</option>
 <option value="all">All</option>

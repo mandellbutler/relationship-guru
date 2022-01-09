@@ -41,3 +41,11 @@ img {
     flex-direction: column;
     width: 20rem;
 }
+
+select {
+    background-color: lightgray;
+}
+
+#contactSection {
+    margin-right: 1em;
+}
