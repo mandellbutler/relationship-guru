@@ -114,3 +114,20 @@ selectSection.append(mainSelect);
 mainContainer.append(contactSection);
 main.append(articleContainer);
 footer.append(footerContent);
+
+//to be relocated to contact.js buildContactElement function
+        const contactCard = document.createElement("div");
+
+        contactCard.setAttribute("id", `contactCard`);
+        contactCard.innerHTML = `
+        <h1>This Is A Contact's Card</h1>
+        <p>It has an image</p>
+        <p>It tells their relation to you,</p>
+        <p>Their Age,</p>
+        <p>Favorite Color(s),</p>
+        <p>Gift Suggestions,</p>
+        <p>Quality Time Suggestions,</p>
+        <p>and Alerts You of a Special Event!</p>
+        `
+
+        contactSection.append(contactCard);
