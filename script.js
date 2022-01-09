@@ -116,18 +116,36 @@ main.append(articleContainer);
 footer.append(footerContent);
 
 //to be relocated to contact.js buildContactElement function
-        const contactCard = document.createElement("div");
+const contactCard = document.createElement("div");
+const contactImageSec  = document.createElement("section");
+const contactInfoSec  = document.createElement("section");
+const contactAlertSec  = document.createElement("section");
 
-        contactCard.setAttribute("id", `contactCard`);
-        contactCard.innerHTML = `
-        <h1>This Is A Contact's Card</h1>
-        <p>It has an image</p>
-        <p>It tells their relation to you,</p>
-        <p>Their Age,</p>
-        <p>Favorite Color(s),</p>
-        <p>Gift Suggestions,</p>
-        <p>Quality Time Suggestions,</p>
-        <p>and Alerts You of a Special Event!</p>
-        `
+contactCard.setAttribute("id", "contactCard");
+contactImageSec.setAttribute("id", "contactImage");
+contactInfoSec.setAttribute("id", "contactInfo");
+contactAlertSec.setAttribute("id", "contactAlert");
 
-        contactSection.append(contactCard);
+contactCard.innerHTML = `
+<h1>This Is A Contact's Card</h1>
+`
+contactImageSec.innerHTML = `
+!!!Image!!!
+`
+contactInfoSec.innerHTML = `
+<h2>Contact Info Section</h2>
+<p>It tells their relation to you,</p>
+<p>Their Age,</p>
+<p>Favorite Color(s),</p>
+<p>Gift Suggestions,</p>
+<p>Quality Time Suggestions,</p>
+`
+
+contactAlertSec.innerHTML = `
+<p>and Alerts You of a Special Event!</p>
+`
+
+contactSection.append(contactCard);
+contactCard.append(contactImageSec);
+contactCard.append(contactInfoSec);
+contactCard.append(contactAlertSec);

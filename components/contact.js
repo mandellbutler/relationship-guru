@@ -81,16 +81,32 @@ class Contact {
     buildContactElement = function () {
         // const contactSection = document.getElementById("contactSection");
         // const contactCard = document.createElement("div");
+        // const contactImageSec  = document.createElement("section");
+        // const contactInfoSec  = document.createElement("section");
+        // const contactAlertSec  = document.createElement("section");
 
         // contactCard.setAttribute("id", `${this.firstName}-card`);
+        // contactImageSec.setAttribute("id", `${this.firstName}-image`);
+        // contactInfoSec.setAttribute("id", `${this.firstName}-info`);
+        // contactAlertSec.setAttribute("id", `${this.firstName}-alert`);
+
         // contactCard.innerHTML = `
         // <h1>This Is A Contact's Card</h1>
         // <p>It has an image</p>
+        // `
+        // contactImageSec.innerHTML = `
+        // !!!Image!!!
+        // `
+        // contactInfoSec.innerHTML = `
+        // <h2>Contact Info Section</h2>
         // <p>It tells their relation to you,</p>
         // <p>Their Age,</p>
         // <p>Favorite Color(s),</p>
         // <p>Gift Suggestions,</p>
         // <p>Quality Time Suggestions,</p>
+        // `
+
+        // contactAlertSec.innerHTML = `
         // <p>and Alerts You of a Special Event!</p>
         // `
 
