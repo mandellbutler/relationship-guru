@@ -31,4 +31,17 @@ class Contact {
     updateLastName = function (newLastName) {
         this.lastName = newLastName;
     };
+
+    addGifts = function (newGift) {
+        return this.giftIdeas.push(newGift);
+        
+    };
+
+    setAge = function () {
+        let now = new Date();
+        let bday = new Date (this.birthdate)
+        let timeSince = now - bday;
+        let age = Math.floor(timeSince / (1000 * 3600 * 24) / 365)
+        return age;
+    }
 }
