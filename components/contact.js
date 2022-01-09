@@ -81,36 +81,49 @@ class Contact {
     buildContactElement = function () {
         // const contactSection = document.getElementById("contactSection");
         // const contactCard = document.createElement("div");
-        // const contactImageSec  = document.createElement("section");
         // const contactInfoSec  = document.createElement("section");
+        // const contactInfoContainer  = document.createElement("div");
+        // const contactImgContainer  = document.createElement("div");
         // const contactAlertSec  = document.createElement("section");
 
         // contactCard.setAttribute("id", `${this.firstName}-card`);
-        // contactImageSec.setAttribute("id", `${this.firstName}-image`);
-        // contactInfoSec.setAttribute("id", `${this.firstName}-info`);
+        // contactInfoSec.setAttribute("id", `${this.firstName}-infoSection`);
+        // contactInfoContainer.setAttribute("id", `${this.firstName}-infoContainer`);
+        // contactImgContainer.setAttribute("id", `${this.firstName}-imageContainer`);
         // contactAlertSec.setAttribute("id", `${this.firstName}-alert`);
 
         // contactCard.innerHTML = `
         // <h1>This Is A Contact's Card</h1>
-        // <p>It has an image</p>
         // `
-        // contactImageSec.innerHTML = `
+        // contactImgContainer.innerHTML = `
+        // <h2>(a) It Has an Image Section</h2>
         // !!!Image!!!
         // `
-        // contactInfoSec.innerHTML = `
-        // <h2>Contact Info Section</h2>
-        // <p>It tells their relation to you,</p>
+        // contactInfoContainer.innerHTML = `
+        // <h2>(b) It Has a Contact Info Section</h2>
+        // <h3>Which Lists:</h3>
+        // <p>Your Contact's name,</p>
+        // <p>Their relation to you,</p>
         // <p>Their Age,</p>
         // <p>Favorite Color(s),</p>
         // <p>Gift Suggestions,</p>
-        // <p>Quality Time Suggestions,</p>
+        // <p>as well as Quality Time Suggestions!</p>
         // `
 
         // contactAlertSec.innerHTML = `
-        // <p>and Alerts You of a Special Event!</p>
+        // <h2>(c) It Has an Alert Section</h2>
+        // <p>!!!Xmas Alert!!!</p>
+        // <p>!!!Bday Alert!!!</p>
+        // <p>!!!Anniversary Alert!!!</p>
+        // <p>!!!Valentine's Day Alert!!!</p>
+
         // `
 
         // contactSection.append(contactCard);
+        // contactCard.append(contactInfoSec);
+        // contactInfoSec.append(contactImgContainer);
+        // contactInfoSec.append(contactInfoContainer)
+        // contactCard.append(contactAlertSec);
     }
 
 
