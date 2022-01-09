@@ -23,4 +23,8 @@ class Contact {
         this.dateIdeas = dateIdeas;
         this.image = image;
     }
+
+    updateFirstName = function (newFirstName) {
+        this.firstName = newFirstName;
+    };
 }
