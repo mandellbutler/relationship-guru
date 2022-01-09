@@ -63,4 +63,11 @@ class Contact {
         }
 
     }
+
+    displayGiftIdea = function () {
+        let randomGift = this.giftIdeas[
+            Math.floor(Math.random() * this.giftIdeas.length)
+          ];
+        return randomGift;
+    }
 }
