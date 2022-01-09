@@ -89,8 +89,10 @@ class Contact {
         // contactCard.setAttribute("id", `${this.firstName}-card`);
         // contactCard.setAttribute("class", `contact-cards`);
         // contactInfoSec.setAttribute("id", `${this.firstName}-infoSection`);
-        // contactInfoContainer.setAttribute("id", `${this.firstName}-infoContainer`);
-        // contactImgContainer.setAttribute("id", `${this.firstName}-imageContainer`);
+        // contactInfoContainer.setAttribute("id", "contact-infoContainer");
+        // contactInfoContainer.setAttribute("class", "containers");
+        // contactImgContainer.setAttribute("id", "contact-imageContainer");
+        // contactImgContainer.setAttribute("class", "containers");
         // contactAlertSec.setAttribute("id", `${this.firstName}-alert`);
 
         // contactCard.innerHTML = `

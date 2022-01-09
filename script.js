@@ -125,7 +125,9 @@ contactCard.setAttribute("id", "contactCard");
 contactCard.setAttribute("class", "contact-cards");
 contactInfoSec.setAttribute("id", "contact-infoSection");
 contactInfoContainer.setAttribute("id", "contact-infoContainer");
+contactInfoContainer.setAttribute("class", "containers");
 contactImgContainer.setAttribute("id", "contact-imageContainer");
+contactImgContainer.setAttribute("class", "containers");
 contactAlertSec.setAttribute("id", "contact-alert");
 
 contactCard.innerHTML = `
