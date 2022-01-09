@@ -44,4 +44,23 @@ class Contact {
         let age = Math.floor(timeSince / (1000 * 3600 * 24) / 365)
         return age;
     }
+
+    displayBirthday = function () {
+        let birthdate = new Date(this.birthdate);
+        let options = { month: "long"};
+        let birthMonth = new Intl.DateTimeFormat('en-US', options).format(birthdate)
+        
+        if ((birthdate.getDate() == 1) || (birthdate.getDate() == 21) || (birthdate.getDate() == 31)) {
+            return `${this.firstName}`,"'s Birthday: ", birthMonth + " " + birthdate.getDate() + "st"
+        } else if ((birthdate.getDate() == 2) || (birthdate.getDate() == 22)) {
+            return `${this.firstName}`,"'s Birthday: ", birthMonth + " " + birthdate.getDate() + "nd"
+        } else if ((birthdate.getDate() == 3) || (birthdate.getDate() == 23)) {
+            return `${this.firstName}`,"'s Birthday: ", birthMonth + " " + birthdate.getDate() + "rd"
+        } else if (((birthdate.getDate() >= 4) && (birthdate.getDate() <= 20)) || ((birthdate.getDate() >= 24) && (birthdate.getDate() <= 30))) {
+            return `${this.firstName}`,"'s Birthday: ", birthMonth + " " + birthdate.getDate() + "th"
+        } else {
+            return "Please enter valid birthdate!"
+        }
+
+    }
 }
