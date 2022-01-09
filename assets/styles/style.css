@@ -37,8 +37,8 @@ main {
 }
 
 img {
-    height: 250px;
-    width: 250px;
+    height: 10em;
+    width: 10em;
 }
 
 #selectSection {
@@ -60,6 +60,14 @@ select {
 .contact-cards {
     display: flex;
     flex-direction: column;
+    padding: .5em;
+    margin: 1em 0em 0em;
+    border: purple 4px solid;
+}
+
+#imageSection {
+    display: flex;
+    flex-direction: column;
 }
 
 #contact-infoSection {
@@ -67,6 +75,23 @@ select {
     flex-direction: row;
 }
 
+.contact-images {
+    height: 7em;
+    width: 7em;
+}
+
+#contact-infoList {
+    margin-right: .5em;
+    margin-top: 0px;
+    padding-inline-start: 10px;
+}
+
+#contact-alert {
+    border: black 4px solid;
+}
+
 ul {
     list-style: none;
 }
+
+/* Article Section*/

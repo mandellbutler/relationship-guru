@@ -135,17 +135,19 @@ contactCard.innerHTML = `
 `
 contactImgContainer.innerHTML = `
 <h2>(a) It Has an Image Section</h2>
-!!!Image!!!
+<img class="contact-images" src="./assets/images/contact.jpg" alt="graphis image of annonymous user">
 `
 contactInfoContainer.innerHTML = `
 <h2>(b) It Has a Contact Info Section</h2>
+<ul id="contact-infoList">
 <h3>Which Lists:</h3>
-<p>Your Contact's name,</p>
-<p>Their relation to you,</p>
-<p>Their Age,</p>
-<p>Favorite Color(s),</p>
-<p>Gift Suggestions,</p>
-<p>as well as Quality Time Suggestions!</p>
+<li>Your Contact's name,</li>
+<li>Their relation to you,</li>
+<li>Their Age,</li>
+<li>Favorite Color(s),</li>
+<li>Gift Suggestions,</li>
+<li>as well as Quality Time Suggestions!</li>
+</ul>
 `
 
 contactAlertSec.innerHTML = `
