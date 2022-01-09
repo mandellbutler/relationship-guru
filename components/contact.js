@@ -64,10 +64,19 @@ class Contact {
 
     }
 
+    displayDateIdea = function () {
+        let randomDate = this.dateIdeas[
+            Math.floor(Math.random() * this.dateIdeas.length)
+          ];
+        return randomDate;
+    }
+
     displayGiftIdea = function () {
         let randomGift = this.giftIdeas[
             Math.floor(Math.random() * this.giftIdeas.length)
           ];
         return randomGift;
     }
+
+
 }
