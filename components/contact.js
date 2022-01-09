@@ -27,4 +27,8 @@ class Contact {
     updateFirstName = function (newFirstName) {
         this.firstName = newFirstName;
     };
+
+    updateLastName = function (newLastName) {
+        this.lastName = newLastName;
+    };
 }
