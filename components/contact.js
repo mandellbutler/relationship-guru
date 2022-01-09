@@ -87,6 +87,7 @@ class Contact {
         // const contactAlertSec  = document.createElement("section");
 
         // contactCard.setAttribute("id", `${this.firstName}-card`);
+        // contactCard.setAttribute("class", `contact-cards`);
         // contactInfoSec.setAttribute("id", `${this.firstName}-infoSection`);
         // contactInfoContainer.setAttribute("id", `${this.firstName}-infoContainer`);
         // contactImgContainer.setAttribute("id", `${this.firstName}-imageContainer`);

@@ -38,7 +38,6 @@ selectSection.setAttribute("id", "selectSection");
 selectLabel.setAttribute("for", "contacts");
 mainSelect.setAttribute("name", "contacts");
 contactSection.setAttribute("id", "contactSection");
-contactSection.setAttribute("class", "contact-cards");
 
 articleContainer.setAttribute("id", "articleContainer");
 articleContainer.setAttribute("class", "containers");
@@ -123,6 +122,7 @@ const contactImgContainer  = document.createElement("div");
 const contactAlertSec  = document.createElement("section");
 
 contactCard.setAttribute("id", "contactCard");
+contactCard.setAttribute("class", "contact-cards");
 contactInfoSec.setAttribute("id", "contact-infoSection");
 contactInfoContainer.setAttribute("id", "contact-infoContainer");
 contactImgContainer.setAttribute("id", "contact-imageContainer");

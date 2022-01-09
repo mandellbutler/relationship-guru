@@ -48,4 +48,20 @@ select {
 
 #contactSection {
     margin-right: 1em;
+    display: flex;
+    flex-direction: row;
+}
+
+.contact-cards {
+    display: flex;
+    flex-direction: column;
+}
+
+#contact-infoSection {
+    display: flex;
+    flex-direction: row;
+}
+
+ul {
+    list-style: none;
 }
