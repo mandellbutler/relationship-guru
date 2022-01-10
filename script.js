@@ -115,52 +115,52 @@ main.append(articleContainer);
 footer.append(footerContent);
 
 //to be relocated to contact.js buildContactElement function
-const contactCard = document.createElement("div");
-const contactInfoSec  = document.createElement("section");
-const contactInfoContainer  = document.createElement("div");
-const contactImgContainer  = document.createElement("div");
-const contactAlertSec  = document.createElement("section");
+// const contactCard = document.createElement("div");
+// const contactInfoSec  = document.createElement("section");
+// const contactInfoContainer  = document.createElement("div");
+// const contactImgContainer  = document.createElement("div");
+// const contactAlertSec  = document.createElement("section");
 
-contactCard.setAttribute("id", "contactCard");
-contactCard.setAttribute("class", "contact-cards");
-contactInfoSec.setAttribute("id", "contact-infoSection");
-contactInfoContainer.setAttribute("id", "contact-infoContainer");
-contactInfoContainer.setAttribute("class", "containers");
-contactImgContainer.setAttribute("id", "contact-imageContainer");
-contactImgContainer.setAttribute("class", "containers");
-contactAlertSec.setAttribute("id", "contact-alert");
+// contactCard.setAttribute("id", "contactCard");
+// contactCard.setAttribute("class", "contact-cards");
+// contactInfoSec.setAttribute("id", "contact-infoSection");
+// contactInfoContainer.setAttribute("id", "contact-infoContainer");
+// contactInfoContainer.setAttribute("class", "containers");
+// contactImgContainer.setAttribute("id", "contact-imageContainer");
+// contactImgContainer.setAttribute("class", "containers");
+// contactAlertSec.setAttribute("id", "contact-alert");
 
-contactCard.innerHTML = `
-<h1>This Is A Contact's Card</h1>
-`
-contactImgContainer.innerHTML = `
-<h2>(a) It Has an Image Section</h2>
-<img class="contact-images" src="./assets/images/contact.jpg" alt="graphis image of annonymous user">
-`
-contactInfoContainer.innerHTML = `
-<h2>(b) It Has a Contact Info Section</h2>
-<ul id="contact-infoList">
-<h3>Which Lists:</h3>
-<li>Your Contact's name,</li>
-<li>Their relation to you,</li>
-<li>Their Age,</li>
-<li>Favorite Color(s),</li>
-<li>Gift Suggestions,</li>
-<li>as well as Quality Time Suggestions!</li>
-</ul>
-`
+// contactCard.innerHTML = `
+// <h1>This Is A Contact's Card</h1>
+// `
+// contactImgContainer.innerHTML = `
+// <h2>(a) It Has an Image Section</h2>
+// <img class="contact-images" src="./assets/images/contact.jpg" alt="graphis image of annonymous user">
+// `
+// contactInfoContainer.innerHTML = `
+// <h2>(b) It Has a Contact Info Section</h2>
+// <ul id="contact-infoList">
+// <h3>Which Lists:</h3>
+// <li>Your Contact's name,</li>
+// <li>Their relation to you,</li>
+// <li>Their Age,</li>
+// <li>Favorite Color(s),</li>
+// <li>Gift Suggestions,</li>
+// <li>as well as Quality Time Suggestions!</li>
+// </ul>
+// `
 
-contactAlertSec.innerHTML = `
-<h2>(c) It Has an Alert Section</h2>
-<p>!!!Xmas Alert!!!</p>
-<p>!!!Bday Alert!!!</p>
-<p>!!!Anniversary Alert!!!</p>
-<p>!!!Valentine's Day Alert!!!</p>
+// contactAlertSec.innerHTML = `
+// <h2>(c) It Has an Alert Section</h2>
+// <p>!!!Xmas Alert!!!</p>
+// <p>!!!Bday Alert!!!</p>
+// <p>!!!Anniversary Alert!!!</p>
+// <p>!!!Valentine's Day Alert!!!</p>
 
-`
+// `
 
-contactSection.append(contactCard);
-contactCard.append(contactInfoSec);
-contactInfoSec.append(contactImgContainer);
-contactInfoSec.append(contactInfoContainer)
-contactCard.append(contactAlertSec);
+// contactSection.append(contactCard);
+// contactCard.append(contactInfoSec);
+// contactInfoSec.append(contactImgContainer);
+// contactInfoSec.append(contactInfoContainer)
+// contactCard.append(contactAlertSec);

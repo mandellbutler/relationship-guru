@@ -79,54 +79,58 @@ class Contact {
     }
 
     buildContactElement = function () {
-        // const contactSection = document.getElementById("contactSection");
-        // const contactCard = document.createElement("div");
-        // const contactInfoSec  = document.createElement("section");
-        // const contactInfoContainer  = document.createElement("div");
-        // const contactImgContainer  = document.createElement("div");
-        // const contactAlertSec  = document.createElement("section");
+        const contactSection = document.getElementById("contactSection");
+        const contactCard = document.createElement("div");
+        const contactInfoSec  = document.createElement("section");
+        const contactInfoContainer  = document.createElement("div");
+        const contactImgContainer  = document.createElement("div");
+        const contactAlertSec  = document.createElement("section");
 
-        // contactCard.setAttribute("id", `${this.firstName}-card`);
-        // contactCard.setAttribute("class", `contact-cards`);
-        // contactInfoSec.setAttribute("id", `${this.firstName}-infoSection`);
-        // contactInfoContainer.setAttribute("id", "contact-infoContainer");
-        // contactInfoContainer.setAttribute("class", "containers");
-        // contactImgContainer.setAttribute("id", "contact-imageContainer");
-        // contactImgContainer.setAttribute("class", "containers");
-        // contactAlertSec.setAttribute("id", `${this.firstName}-alert`);
+        contactCard.setAttribute("id", `${this.firstName}-card`);
+        contactCard.setAttribute("class", `contact-cards`);
+        contactInfoSec.setAttribute("id", `${this.firstName}-infoSection`);
+        contactInfoSec.setAttribute("class", `infoSections`);
+        contactInfoContainer.setAttribute("id", "contact-infoContainer");
+        contactInfoContainer.setAttribute("class", "containers");
+        contactImgContainer.setAttribute("id", "contact-imageContainer");
+        contactImgContainer.setAttribute("class", "containers");
+        contactAlertSec.setAttribute("id", `${this.firstName}-alert`);
 
-        // contactCard.innerHTML = `
-        // <h1>This Is A Contact's Card</h1>
-        // `
-        // contactImgContainer.innerHTML = `
-        // <h2>(a) It Has an Image Section</h2>
-        // !!!Image!!!
-        // `
-        // contactInfoContainer.innerHTML = `
-        // <h2>(b) It Has a Contact Info Section</h2>
-        // <h3>Which Lists:</h3>
-        // <p>Your Contact's name,</p>
-        // <p>Their relation to you,</p>
-        // <p>Their Age,</p>
-        // <p>Favorite Color(s),</p>
-        // <p>Gift Suggestions,</p>
-        // <p>as well as Quality Time Suggestions!</p>
-        // `
+        contactCard.innerHTML = `
+        <h1>This Is A Contact's Card</h1>
+        `
+        contactImgContainer.innerHTML = `
+        <h2>(a) It Has an Image Section</h2>
+        <img ${this.image.src} ${this.image.alt}>
+        `
+        contactInfoContainer.innerHTML = `
+        <h2>(b) It Has a Contact Info Section</h2>
+        <ul id="contact-infoList">
+        <h3>Which Lists:</h3>
+        <h3 id="${this.firstName}-title">${this.firstName}</h3>
+        <li>Relation: ${this.relation}</li>
+        <li>Birthday: ${this.displayBirthday()}</li>
+        <li>Age: ${this.setAge()}</li>
+        <li>Favorite Color: ${this.favoriteColor}</li>
+        <li>Suggested Gift: ${this.displayGiftIdea}</li>
+        <li>Suggested Date: ${this.displayDateIdea}</li>
+        </ul>
+        `
 
-        // contactAlertSec.innerHTML = `
-        // <h2>(c) It Has an Alert Section</h2>
-        // <p>!!!Xmas Alert!!!</p>
-        // <p>!!!Bday Alert!!!</p>
-        // <p>!!!Anniversary Alert!!!</p>
-        // <p>!!!Valentine's Day Alert!!!</p>
+        contactAlertSec.innerHTML = `
+        <h2>(c) It Has an Alert Section</h2>
+        <p>!!!Xmas Alert!!!</p>
+        <p>!!!Bday Alert!!!</p>
+        <p>!!!Anniversary Alert!!!</p>
+        <p>!!!Valentine's Day Alert!!!</p>
 
-        // `
+        `
 
-        // contactSection.append(contactCard);
-        // contactCard.append(contactInfoSec);
-        // contactInfoSec.append(contactImgContainer);
-        // contactInfoSec.append(contactInfoContainer)
-        // contactCard.append(contactAlertSec);
+        contactSection.append(contactCard);
+        contactCard.append(contactInfoSec);
+        contactInfoSec.append(contactImgContainer);
+        contactInfoSec.append(contactInfoContainer)
+        contactCard.append(contactAlertSec);
     }
 
 

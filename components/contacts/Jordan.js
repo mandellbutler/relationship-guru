@@ -11,10 +11,11 @@ const Jordan = new Contact (
     ["Headphones", "Gucci Socks", "Handguns", "Pokemon"],
     [],
     {
-        "src": "../assets/images/contact.jpg",
-        "alt": "=graphic image of annonymous user"
+        "src": "=../assets/images/contact.jpg",
+        "alt": "==graphic image of annonymous user"
     }
 )
 
+Jordan.buildContactElement();
 
 export default Jordan;

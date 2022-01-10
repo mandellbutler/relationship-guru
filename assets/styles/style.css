@@ -78,7 +78,7 @@ select {
     flex-direction: column;
 }
 
-#contact-infoSection {
+.infoSections {
     display: flex;
     flex-direction: row;
 }
