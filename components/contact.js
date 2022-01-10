@@ -137,7 +137,7 @@ class Contact {
         contactInfoSec.append(contactImgContainer);
         contactInfoSec.append(contactInfoContainer)
         //grabbing the contact's info-list id AFTER it has been created and placed
-        document.getElementById("jordan-infoList").append(giftDisplay)
+        document.getElementById(`${this.firstName}-infoList`).append(giftDisplay)
         contactCard.append(contactAlertSec);
     }
 

@@ -11,8 +11,8 @@ const Jordan = new Contact (
     ["Headphones", "Gucci Socks", "Handguns", "Pokemon"],
     [],
     {
-        "src": "=../assets/images/contact.jpg",
-        "alt": "==graphic image of annonymous user"
+        "src": "src=../assets/images/contact.jpg",
+        "alt": "alt=graphic image of annonymous user"
     }
 )
 
