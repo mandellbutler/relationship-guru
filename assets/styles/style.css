@@ -61,8 +61,8 @@ select {
 
 #contactSection {
     margin-right: 1em;
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
 }
 
 .contact-cards {
@@ -89,6 +89,8 @@ select {
 }
 
 #contact-infoList {
+    /* display: flex;
+    flex-direction: column; */
     margin-right: .5em;
     margin-top: 0px;
     padding-inline-start: 10px;
