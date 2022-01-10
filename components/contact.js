@@ -98,9 +98,9 @@ class Contact {
         contactCard.setAttribute("class", `contact-cards`);
         contactInfoSec.setAttribute("id", `${this.firstName}-info`);
         contactInfoSec.setAttribute("class", `infoSections`);
-        contactInfoContainer.setAttribute("id", "contact-infoContainer");
+        contactInfoContainer.setAttribute("id", `${this.firstName}-infoContainer`);
         contactInfoContainer.setAttribute("class", "containers");
-        contactImgContainer.setAttribute("id", "contact-imageContainer");
+        contactImgContainer.setAttribute("id", `${this.firstName}-imageContainer`);
         contactImgContainer.setAttribute("class", "containers");
         contactAlertSec.setAttribute("id", `${this.firstName}-alert`);
 
