@@ -105,7 +105,7 @@ class Contact {
         contactAlertSec.setAttribute("id", `${this.firstName}-alert`);
 
         contactImgContainer.innerHTML = `
-        <img ${this.image.src} ${this.image.alt}>
+        <img ${this.image.src} ${this.image.alt} class="contact-images">
         `
         contactInfoContainer.innerHTML = `
         <ul id="${this.firstName}-infoList" class="infoLists">
