@@ -79,6 +79,12 @@ class Contact {
     }
 
     buildContactElement = function () {
+        //Format first letter in names to caps
+        let firstStr = this.firstName;
+        let capFirst = firstStr.charAt(0).toUpperCase() + firstStr.slice(1);
+        let lastStr = this.lastName;
+        let capLast = lastStr.charAt(0).toUpperCase() + lastStr.slice(1);
+
         const contactSection = document.getElementById("contactSection");
         const contactCard = document.createElement("div");
         const contactInfoSec  = document.createElement("section");
@@ -103,7 +109,7 @@ class Contact {
         `
         contactInfoContainer.innerHTML = `
         <ul id="${this.firstName}-infoList" class="infoLists">
-        <h3 id="${this.firstName}-title">${this.firstName}</h3>
+        <h3 id="${this.firstName}-title" class="contact-titles">${capFirst} ${capLast}</h3>
         <li>Relation: ${this.relation}</li>
         <li>Birthday: ${this.displayBirthday()}</li>
         <li>Age: ${this.setAge()}</li>
