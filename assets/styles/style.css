@@ -88,7 +88,7 @@ select {
     width: 7em;
 }
 
-#contact-infoList {
+.infoLists {
     /* display: flex;
     flex-direction: column; */
     margin-right: .5em;

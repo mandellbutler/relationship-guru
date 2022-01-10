@@ -83,12 +83,14 @@ class Contact {
         const contactCard = document.createElement("div");
         const contactInfoSec  = document.createElement("section");
         const contactInfoContainer  = document.createElement("div");
+        
         const contactImgContainer  = document.createElement("div");
         const contactAlertSec  = document.createElement("section");
+        const giftDisplay = document.createElement("li");
 
         contactCard.setAttribute("id", `${this.firstName}-card`);
         contactCard.setAttribute("class", `contact-cards`);
-        contactInfoSec.setAttribute("id", `${this.firstName}-infoSection`);
+        contactInfoSec.setAttribute("id", `${this.firstName}-info`);
         contactInfoSec.setAttribute("class", `infoSections`);
         contactInfoContainer.setAttribute("id", "contact-infoContainer");
         contactInfoContainer.setAttribute("class", "containers");
@@ -96,23 +98,16 @@ class Contact {
         contactImgContainer.setAttribute("class", "containers");
         contactAlertSec.setAttribute("id", `${this.firstName}-alert`);
 
-        contactCard.innerHTML = `
-        <h1>This Is A Contact's Card</h1>
-        `
         contactImgContainer.innerHTML = `
-        <h2>(a) It Has an Image Section</h2>
         <img ${this.image.src} ${this.image.alt}>
         `
         contactInfoContainer.innerHTML = `
-        <h2>(b) It Has a Contact Info Section</h2>
-        <ul id="contact-infoList">
-        <h3>Which Lists:</h3>
+        <ul id="${this.firstName}-infoList" class="infoLists">
         <h3 id="${this.firstName}-title">${this.firstName}</h3>
         <li>Relation: ${this.relation}</li>
         <li>Birthday: ${this.displayBirthday()}</li>
         <li>Age: ${this.setAge()}</li>
         <li>Favorite Color: ${this.favoriteColor}</li>
-        <li>Suggested Gift: ${this.displayGiftIdea}</li>
         <li>Suggested Date: ${this.displayDateIdea}</li>
         </ul>
         `
@@ -126,10 +121,23 @@ class Contact {
 
         `
 
+        giftDisplay.setAttribute("id", `${this.firstName}-giftIdeas`);
+        if (this.giftIdeas.length === 0) {
+            giftDisplay.classList = "hidden"
+        } else {
+            giftDisplay.classList = "giftIdeas"
+        }
+
+        giftDisplay.innerHTML = `
+        Gift Idea: ${this.displayGiftIdea()}
+        `
+
         contactSection.append(contactCard);
         contactCard.append(contactInfoSec);
         contactInfoSec.append(contactImgContainer);
         contactInfoSec.append(contactInfoContainer)
+        //grabbing the contact's info-list id AFTER it has been created and placed
+        document.getElementById("jordan-infoList").append(giftDisplay)
         contactCard.append(contactAlertSec);
     }
 
