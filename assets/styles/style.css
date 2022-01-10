@@ -89,6 +89,13 @@ select {
     width: 5em;
 }
 
+.contact-titles {
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    text-decoration: underline;
+    padding-top: .5em;
+}
+
 .infoLists {
     /* display: flex;
     flex-direction: column; */
