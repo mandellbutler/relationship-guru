@@ -96,6 +96,10 @@ select {
     padding-inline-start: 10px;
 }
 
+.hidden {
+    display: none;
+}
+
 #contact-alert {
     border: black 4px solid;
 }
