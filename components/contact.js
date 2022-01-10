@@ -83,10 +83,10 @@ class Contact {
         const contactCard = document.createElement("div");
         const contactInfoSec  = document.createElement("section");
         const contactInfoContainer  = document.createElement("div");
-        
         const contactImgContainer  = document.createElement("div");
         const contactAlertSec  = document.createElement("section");
         const giftDisplay = document.createElement("li");
+        const dateDisplay = document.createElement("li");
 
         contactCard.setAttribute("id", `${this.firstName}-card`);
         contactCard.setAttribute("class", `contact-cards`);
@@ -108,7 +108,6 @@ class Contact {
         <li>Birthday: ${this.displayBirthday()}</li>
         <li>Age: ${this.setAge()}</li>
         <li>Favorite Color: ${this.favoriteColor}</li>
-        <li>Suggested Date: ${this.displayDateIdea}</li>
         </ul>
         `
 
@@ -128,8 +127,18 @@ class Contact {
             giftDisplay.classList = "giftIdeas"
         }
 
+        dateDisplay.setAttribute("id", `${this.firstName}-dateIdeas`);
+        if (this.dateIdeas.length === 0) {
+            dateDisplay.classList = "hidden"
+        } else {
+            dateDisplay.classList = "dateIdeas"
+        }
+
         giftDisplay.innerHTML = `
         Gift Idea: ${this.displayGiftIdea()}
+        `
+        dateDisplay.innerHTML = `
+        Date Idea: ${this.displayDateIdea()}
         `
 
         contactSection.append(contactCard);
@@ -138,6 +147,7 @@ class Contact {
         contactInfoSec.append(contactInfoContainer)
         //grabbing the contact's info-list id AFTER it has been created and placed
         document.getElementById(`${this.firstName}-infoList`).append(giftDisplay)
+        document.getElementById(`${this.firstName}-infoList`).append(dateDisplay)
         contactCard.append(contactAlertSec);
     }
 
