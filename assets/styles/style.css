@@ -109,6 +109,12 @@ select {
     padding-inline-start: 10px;
 }
 
+.eventAlerts {
+    border: solid 4px white;
+    background-color: #FFE17C;
+
+}
+
 .hidden {
     display: none;
 }
