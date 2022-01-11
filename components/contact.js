@@ -78,6 +78,42 @@ class Contact {
         return randomGift;
     }
 
+    announceEvent = function () {
+        //Format first letter in names to caps
+        let firstStr = this.firstName;
+        let capFirst = firstStr.charAt(0).toUpperCase() + firstStr.slice(1);
+        
+        let today = new Date();
+
+        //CHRISTMAS
+        let xmasYear = today.getFullYear();
+
+        if (today.getMonth() == 11 && today.getDate() > 25) {
+            xmasYear = xmasYear + 1;
+        }
+        let xmasDate = new Date(xmasYear, 0, 25);
+
+        let daysTilXmas = Math.ceil((xmasDate.getTime() - today.getTime()));
+
+        //BUILD ALERT ELEMENTS
+        let event = document.getElementById(`${this.firstName}-alert`)
+        let alertDiv = document.createElement("div");
+
+        alertDiv.setAttribute("id", `${this.firstName}-alertContainer`);
+
+        event.append(alertDiv);
+
+        //xmas announcement element
+        let xmasAnnoucement = document.createElement("p");
+        xmasAnnoucement.setAttribute("id", "xmasAlert");
+        xmasAnnoucement.setAttribute("class", "eventAlerts");
+        xmasAnnoucement.innerHTML = `
+        There are <span id="tilXmasAlert" class="daysTilAlerts"> ${daysTilXmas}</span> days until Christmas! Here is a great gift idea for ${capFirst}: ${this.displayGiftIdea()}!
+        `
+
+        alertDiv.append(xmasAnnoucement);
+    }
+
     buildContactElement = function () {
         //Format first letter in names to caps
         let firstStr = this.firstName;
@@ -119,11 +155,6 @@ class Contact {
 
         contactAlertSec.innerHTML = `
         <h2>(c) It Has an Alert Section</h2>
-        <p>!!!Xmas Alert!!!</p>
-        <p>!!!Bday Alert!!!</p>
-        <p>!!!Anniversary Alert!!!</p>
-        <p>!!!Valentine's Day Alert!!!</p>
-
         `
 
         giftDisplay.setAttribute("id", `${this.firstName}-giftIdeas`);
