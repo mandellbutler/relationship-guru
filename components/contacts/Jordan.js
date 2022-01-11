@@ -8,7 +8,7 @@ const Jordan = new Contact (
     "January 23, 1993",
     "",
     "Black",
-    ["Headphones", "Gucci Socks", "Handguns", "Pokemon"],
+    ["Headphones", "Gucci Socks", "A Handgun", "Pokemon"],
     [],
     {
         "src": "src=../assets/images/contact.jpg",
