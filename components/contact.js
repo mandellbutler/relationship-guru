@@ -96,6 +96,22 @@ class Contact {
 
         let daysTilXmas = Math.ceil((xmasDate.getTime() - today.getTime()) / (day));
 
+        //BIRTHDAY
+        let birthdate = new Date(this.birthdate)
+        let birthDay = birthdate.getDate();
+        let birthMonth = (birthdate.getMonth() +1);
+        let newBirthYear = today.getFullYear();
+
+
+        if ((today.getMonth() > (birthMonth - 1)) || ((today.getMonth() == (birthMonth - 1)) && (today.getDate() >= birthDay))){
+            newBirthYear = newBirthYear + 1;
+        }
+        ;
+
+        let bdayToConvert = birthMonth + " " + birthDay + ", " + newBirthYear;
+        let newBday = new Date(bdayToConvert);
+        let daysTilBirthdate = Math.ceil((newBday.getTime() - today.getTime()) / (day));
+
         //BUILD ALERT ELEMENTS
         let event = document.getElementById(`${this.firstName}-alert`)
         let alertDiv = document.createElement("div");
@@ -113,6 +129,16 @@ class Contact {
         `
 
         alertDiv.append(xmasAnnoucement);
+
+        let bdayAnnoucement = document.createElement("p");
+        bdayAnnoucement.setAttribute("id", `${this.firstName}-bdayAlert`);
+        bdayAnnoucement.setAttribute("class", "eventAlerts");
+
+        bdayAnnoucement.innerHTML =`
+        There are ${daysTilBirthdate} days until ${capFirst}'s Birthday!!
+        `
+
+        alertDiv.append(bdayAnnoucement);
     }
 
     buildContactElement = function () {
