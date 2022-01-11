@@ -161,7 +161,7 @@ class Contact {
         bdayAnnoucement.setAttribute("class", "eventAlerts");
 
         bdayAnnoucement.innerHTML =`
-        There are ${daysTilBirthdate} days until ${capFirst}'s Birthday!!
+        There are <span id="tilBdayAlert" class="daysTilAlerts">${daysTilBirthdate}</span> days until ${capFirst}'s Birthday!!
         `
 
         alertDiv.append(bdayAnnoucement);
