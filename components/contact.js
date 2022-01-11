@@ -188,7 +188,7 @@ class Contact {
         contactInfoSec.setAttribute("id", `${this.firstName}-info`);
         contactInfoSec.setAttribute("class", `infoSections`);
         contactInfoContainer.setAttribute("id", `${this.firstName}-infoContainer`);
-        contactInfoContainer.setAttribute("class", "containers");
+        contactInfoContainer.setAttribute("class", "info-containers");
         contactImgContainer.setAttribute("id", `${this.firstName}-imageContainer`);
         contactImgContainer.setAttribute("class", "containers");
         contactAlertSec.setAttribute("id", `${this.firstName}-alert`);
@@ -204,10 +204,6 @@ class Contact {
         <li>Age: ${this.setAge()}</li>
         <li>Favorite Color: ${this.favoriteColor}</li>
         </ul>
-        `
-
-        contactAlertSec.innerHTML = `
-        <h2>(c) It Has an Alert Section</h2>
         `
 
         giftDisplay.setAttribute("id", `${this.firstName}-giftIdeas`);

@@ -61,7 +61,6 @@ select {
 }
 
 #contactSection {
-    margin-right: 1em;
     display: flex;
     flex-direction: column;
 }
@@ -71,7 +70,8 @@ select {
     flex-direction: column;
     padding: .5em;
     margin: 1em 0em 0em;
-    border: purple 4px solid;
+    border: #477000  4px solid;
+    background-color: lightgrey;
 }
 
 #imageSection {
@@ -82,6 +82,11 @@ select {
 .infoSections {
     display: flex;
     flex-direction: row;
+    align-items: flex-start;
+}
+
+.info-containers {
+    width: 13em;
 }
 
 .contact-images {
