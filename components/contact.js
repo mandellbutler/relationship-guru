@@ -92,8 +92,9 @@ class Contact {
             xmasYear = xmasYear + 1;
         }
         let xmasDate = new Date(xmasYear, 0, 25);
+        let day = 1000 * 60 * 60 * 24;
 
-        let daysTilXmas = Math.ceil((xmasDate.getTime() - today.getTime()));
+        let daysTilXmas = Math.ceil((xmasDate.getTime() - today.getTime()) / (day));
 
         //BUILD ALERT ELEMENTS
         let event = document.getElementById(`${this.firstName}-alert`)
@@ -105,7 +106,7 @@ class Contact {
 
         //xmas announcement element
         let xmasAnnoucement = document.createElement("p");
-        xmasAnnoucement.setAttribute("id", "xmasAlert");
+        xmasAnnoucement.setAttribute("id", `${this.firstName}-xmasAlert`);
         xmasAnnoucement.setAttribute("class", "eventAlerts");
         xmasAnnoucement.innerHTML = `
         There are <span id="tilXmasAlert" class="daysTilAlerts"> ${daysTilXmas}</span> days until Christmas! Here is a great gift idea for ${capFirst}: ${this.displayGiftIdea()}!
