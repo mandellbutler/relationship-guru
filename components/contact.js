@@ -151,7 +151,7 @@ class Contact {
         anniversaryAnnoucement.setAttribute("class", "eventAlerts");
 
         anniversaryAnnoucement.innerHTML = `
-        There are ${daysTilAnniversary} days until ${capFirst}'s Anniversary!!
+        There are <span id="tilAnniversaryAlert" class="daysTilAlerts">${daysTilAnniversary}</span> days until ${capFirst}'s Anniversary!!
         `
         alertDiv.append(anniversaryAnnoucement);
         
