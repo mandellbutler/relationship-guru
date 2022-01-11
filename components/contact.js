@@ -96,6 +96,21 @@ class Contact {
 
         let daysTilXmas = Math.ceil((xmasDate.getTime() - today.getTime()) / (day));
 
+        //ANNIVERSARY
+        let date = "January 24, 2019";
+        let anniversary = new Date(date);
+        let anniversaryDay = anniversary.getDate();
+        let anniversaryMonth = anniversary.getMonth() + 1;
+        let newAnniversaryYear = today.getFullYear();
+
+        if ((today.getMonth() > (anniversaryMonth - 1)) || ((today.getMonth() == (anniversaryMonth - 1)) && (today.getDate() >= anniversaryDay))){
+            newAnniversaryYear = newAnniversaryYear + 1;
+        }
+
+        let anniversaryToConvert = anniversaryMonth + " " + anniversaryDay + ", " + newAnniversaryYear;
+        let newAnniversary = new Date(anniversaryToConvert)
+        let daysTilAnniversary = Math.ceil((newAnniversary.getTime() - today.getTime()) / (day));
+
         //BIRTHDAY
         let birthdate = new Date(this.birthdate)
         let birthDay = birthdate.getDate();
@@ -125,11 +140,22 @@ class Contact {
         xmasAnnoucement.setAttribute("id", `${this.firstName}-xmasAlert`);
         xmasAnnoucement.setAttribute("class", "eventAlerts");
         xmasAnnoucement.innerHTML = `
-        There are <span id="tilXmasAlert" class="daysTilAlerts"> ${daysTilXmas}</span> days until Christmas! Here is a great gift idea for ${capFirst}: ${this.displayGiftIdea()}!
+        There are ${daysTilXmas} days until Christmas! Here is a great gift idea for ${capFirst}: ${this.displayGiftIdea()}!
         `
 
         alertDiv.append(xmasAnnoucement);
 
+        //anniversary announcement element
+        let anniversaryAnnoucement = document.createElement("p");
+        anniversaryAnnoucement.setAttribute("id", `${this.firstName}-anniversaryAlert`);
+        anniversaryAnnoucement.setAttribute("class", "eventAlerts");
+
+        anniversaryAnnoucement.innerHTML = `
+        There are ${daysTilAnniversary} days until ${capFirst}'s Anniversary!!
+        `
+        alertDiv.append(anniversaryAnnoucement);
+        
+        //bday announcement element
         let bdayAnnoucement = document.createElement("p");
         bdayAnnoucement.setAttribute("id", `${this.firstName}-bdayAlert`);
         bdayAnnoucement.setAttribute("class", "eventAlerts");
