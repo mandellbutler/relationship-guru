@@ -140,7 +140,7 @@ class Contact {
         xmasAnnoucement.setAttribute("id", `${this.firstName}-xmasAlert`);
         xmasAnnoucement.setAttribute("class", "eventAlerts");
         xmasAnnoucement.innerHTML = `
-        There are ${daysTilXmas} days until Christmas! Here is a great gift idea for ${capFirst}: ${this.displayGiftIdea()}!
+        There are <span id="tilXmasAlert" class="daysTilAlerts"> ${daysTilXmas}</span> days until Christmas! Here is a great gift idea for ${capFirst}: ${this.displayGiftIdea()}!
         `
 
         alertDiv.append(xmasAnnoucement);
