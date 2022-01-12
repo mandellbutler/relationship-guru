@@ -268,7 +268,7 @@ class Contact {
                 })
                 const selectedCard = document.getElementById(`${this.firstName}-card`);
                 selectedCard.className = "contact-cards";
-                contactContainer.append(selectedCard);
+                contactSection.append(selectedCard);
 
             } else if (item === "none") {
                 cardsDisplayed.forEach((eachCard) => {
@@ -291,6 +291,13 @@ class Contact {
         </ul>
         `
         closeContactEl.innerHTML = `x`;
+        //event listener for close element
+        closeContactEl.addEventListener("click", () => {
+            const contactCard = document.getElementById(`${this.firstName}-card`);
+            contactCard.setAttribute("class", "contacts-hidden");
+            contactSection.append(contactCard);
+
+        })
 
         giftDisplay.setAttribute("id", `${this.firstName}-giftIdeas`);
         if (this.giftIdeas.length === 0) {

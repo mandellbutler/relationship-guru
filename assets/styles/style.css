@@ -87,6 +87,10 @@ select {
     ;
 }
 
+.contacts-hidden {
+    display: none;
+}
+
 #imageSection {
     display: flex;
     flex-direction: column;
