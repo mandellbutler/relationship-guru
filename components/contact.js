@@ -173,6 +173,13 @@ class Contact {
                 alertDiv.append(item)
                 return item;
             })
+        } else if ((daysTilXmas <= 45) && (daysTilAnniversary <= 60)) {
+            let announceArray = [xmasAnnoucement, anniversaryAnnoucement]
+
+            announceArray.forEach((item) => {
+                alertDiv.append(item)
+                return item;
+            })
         }
     }
 
