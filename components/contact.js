@@ -187,6 +187,14 @@ class Contact {
                 alertDiv.append(item)
                 return item;
             })
+        } else if ((daysTilAnniversary <= 60) && (daysTilBirthdate <= 30)) {
+            let announceArray = [anniversaryAnnoucement, bdayAnnoucement]
+
+            announceArray.forEach((item) => {
+                alertDiv.append(item)
+                return item;
+            })
+            
         }
     }
 
