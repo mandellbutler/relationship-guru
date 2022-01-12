@@ -166,8 +166,8 @@ class Contact {
 
         alertDiv.append(bdayAnnoucement);
 
-        if ((daysTilXmas <= 45) && (daysTilAnniversary <= 60)) {
-            let announceArray = [xmasAnnoucement, anniversaryAnnoucement]
+        if ((daysTilXmas <= 45) && (daysTilAnniversary <= 60) && (daysTilBirthdate <= 30)) {
+            let announceArray = [xmasAnnoucement, anniversaryAnnoucement, bdayAnnoucement]
             
             announceArray.forEach((item) => {
                 alertDiv.append(item)
