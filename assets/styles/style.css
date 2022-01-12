@@ -41,6 +41,7 @@ main {
 
 #mainContainer {
     border-right: solid #477000;
+    padding-right: 1em;
 }
 
 .containers {
@@ -151,7 +152,10 @@ ul {
 }
 
 /* Article Section*/
-
+#articleContainer {
+    padding-left: 1em;
+    margin-left:.5em
+}
 
 
 

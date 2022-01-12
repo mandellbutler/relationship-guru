@@ -174,6 +174,8 @@ class Contact {
         let lastStr = this.lastName;
         let capLast = lastStr.charAt(0).toUpperCase() + lastStr.slice(1);
 
+        const selectMenu = document.getElementById("contacts");
+        const selectItem = document.createElement("option"); 
         const contactSection = document.getElementById("contactSection");
         const contactCard = document.createElement("div");
         const contactInfoSec  = document.createElement("section");
@@ -183,6 +185,9 @@ class Contact {
         const giftDisplay = document.createElement("li");
         const dateDisplay = document.createElement("li");
 
+
+        selectItem.setAttribute("value", `${this.firstName}`);
+        selectItem.setAttribute("id", `${this.firstName}-selectItem`);
         contactCard.setAttribute("id", `${this.firstName}-card`);
         contactCard.setAttribute("class", `contact-cards`);
         contactInfoSec.setAttribute("id", `${this.firstName}-info`);
@@ -192,6 +197,10 @@ class Contact {
         contactImgContainer.setAttribute("id", `${this.firstName}-imageContainer`);
         contactImgContainer.setAttribute("class", "containers");
         contactAlertSec.setAttribute("id", `${this.firstName}-alert`);
+
+        selectItem.innerHTML = `
+        ${capFirst}
+        `
 
         contactImgContainer.innerHTML = `
         <img ${this.image.src} ${this.image.alt} class="contact-images">
@@ -227,11 +236,13 @@ class Contact {
         Date Idea: ${this.displayDateIdea()}
         `
 
+        selectMenu.append(selectItem);
         contactSection.append(contactCard);
         contactCard.append(contactInfoSec);
         contactInfoSec.append(contactImgContainer);
         contactInfoSec.append(contactInfoContainer)
         //grabbing the contact's info-list id AFTER it has been created and placed
+        //then appending the event announcement onto it.
         document.getElementById(`${this.firstName}-infoList`).append(giftDisplay)
         document.getElementById(`${this.firstName}-infoList`).append(dateDisplay)
         contactCard.append(contactAlertSec);
