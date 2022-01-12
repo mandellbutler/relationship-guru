@@ -122,6 +122,17 @@ select {
     padding-inline-start: 10px;
 }
 
+.close-buttons {
+    background-color: lightgrey;
+    ;
+}
+
+.close-buttons:hover {
+    color: #477000;
+    text-decoration: underline;
+    
+}
+
 .eventAlerts {
     /* font-size: 1.5em; */
     border: solid 4px white;
