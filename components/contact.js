@@ -235,7 +235,7 @@ class Contact {
         selectItem.setAttribute("value", `${this.firstName}`);
         selectItem.setAttribute("id", `${this.firstName}-selectItem`);
         contactCard.setAttribute("id", `${this.firstName}-card`);
-        contactCard.setAttribute("class", `contact-cards`);
+        contactCard.setAttribute("class", `contacts-hidden`);
         contactInfoSec.setAttribute("id", `${this.firstName}-info`);
         contactInfoSec.setAttribute("class", `infoSections`);
         contactInfoContainer.setAttribute("id", `${this.firstName}-infoContainer`);
