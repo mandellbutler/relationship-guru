@@ -165,6 +165,15 @@ class Contact {
         `
 
         alertDiv.append(bdayAnnoucement);
+
+        if ((daysTilXmas <= 45) && (daysTilAnniversary <= 60)) {
+            let announceArray = [xmasAnnoucement, anniversaryAnnoucement]
+            
+            announceArray.forEach((item) => {
+                alertDiv.append(item)
+                return item;
+            })
+        }
     }
 
     buildContactElement = function () {
