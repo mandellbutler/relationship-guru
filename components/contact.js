@@ -270,6 +270,11 @@ class Contact {
                 selectedCard.className = "contact-cards";
                 contactContainer.append(selectedCard);
 
+            } else if (item === "none") {
+                cardsDisplayed.forEach((eachCard) => {
+                    eachCard.setAttribute("class", "contacts-hidden");
+
+                })
             }
         })
 
