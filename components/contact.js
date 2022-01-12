@@ -260,7 +260,17 @@ class Contact {
                 cardsHidden.forEach(() => {
                     eachCard.setAttribute("class", "contact-cards");
                 })
-            } 
+            } else if (item === `${this.firstName}`) {
+                cardsDisplayed.forEach((eachCard) => {
+                    eachCard.setAttribute("class", "contacts-hidden");
+
+                    
+                })
+                const selectedCard = document.getElementById(`${this.firstName}-card`);
+                selectedCard.className = "contact-cards";
+                contactContainer.append(selectedCard);
+
+            }
         })
 
         contactImgContainer.innerHTML = `
