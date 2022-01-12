@@ -259,6 +259,7 @@ class Contact {
             if (item === "all") {
                 cardsHidden.forEach(() => {
                     eachCard.setAttribute("class", "contact-cards");
+                    contactSection.append(eachCard);
                 })
             } else if (item === `${this.firstName}`) {
                 cardsDisplayed.forEach((eachCard) => {
@@ -274,6 +275,7 @@ class Contact {
                 cardsDisplayed.forEach((eachCard) => {
                     eachCard.setAttribute("class", "contacts-hidden");
                     contactSection.append(eachCard);
+                    
                 })
             }
         })
