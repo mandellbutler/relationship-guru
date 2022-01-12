@@ -249,6 +249,19 @@ class Contact {
         selectItem.innerHTML = `
         ${capFirst}
         `
+        //event listener for select items
+        selectMenu.addEventListener("change", (event) => {
+            const cardsHidden = document.querySelectorAll(".contacts-hidden");
+            const cardsDisplayed = document.querySelectorAll(".contact-cards");
+            const eachCard = document.getElementById(`${this.firstName}-card`);
+            const item = event.target.value;
+
+            if (item === "all") {
+                cardsHidden.forEach(() => {
+                    eachCard.setAttribute("class", "contact-cards");
+                })
+            } 
+        })
 
         contactImgContainer.innerHTML = `
         <img ${this.image.src} ${this.image.alt} class="contact-images">
