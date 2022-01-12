@@ -195,6 +195,20 @@ class Contact {
                 return item;
             })
             
+        } else if ((daysTilXmas <= 45)) {   
+            alertDiv.append(xmasAnnoucement)
+        } else if ((daysTilAnniversary <= 60)) {
+            alertDiv.append(anniversaryAnnoucement)
+        } else if ((daysTilBirthdate <= 30)) {
+            alertDiv.append(bdayAnnoucement)
+        } else if (daysTilXmas === 365) {
+            alertDiv.append(xmasAnnoucement) 
+        } else if (daysTilAnniversary === 365) {
+            alertDiv.append(anniversaryAnnoucement) 
+        } else if (daysTilBirthdate === 365) {
+            alertDiv.append(bdayAnnoucement) 
+        } else {
+            alertDiv.classList = "hidden"
         }
     }
 
