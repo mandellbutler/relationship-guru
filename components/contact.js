@@ -180,6 +180,13 @@ class Contact {
                 alertDiv.append(item)
                 return item;
             })
+        } else if ((daysTilXmas <= 45) && (daysTilBirthdate <= 30)) {
+            let announceArray = [xmasAnnoucement, bdayAnnoucement]
+
+            announceArray.forEach((item) => {
+                alertDiv.append(item)
+                return item;
+            })
         }
     }
 
