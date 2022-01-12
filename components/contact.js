@@ -263,7 +263,7 @@ class Contact {
             } else if (item === `${this.firstName}`) {
                 cardsDisplayed.forEach((eachCard) => {
                     eachCard.setAttribute("class", "contacts-hidden");
-
+                    contactSection.append(eachCard);
                     
                 })
                 const selectedCard = document.getElementById(`${this.firstName}-card`);
@@ -273,7 +273,7 @@ class Contact {
             } else if (item === "none") {
                 cardsDisplayed.forEach((eachCard) => {
                     eachCard.setAttribute("class", "contacts-hidden");
-
+                    contactSection.append(eachCard);
                 })
             }
         })
