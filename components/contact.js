@@ -165,6 +165,51 @@ class Contact {
         `
 
         alertDiv.append(bdayAnnoucement);
+
+        if ((daysTilXmas <= 45) && (daysTilAnniversary <= 60) && (daysTilBirthdate <= 30)) {
+            let announceArray = [xmasAnnoucement, anniversaryAnnoucement, bdayAnnoucement]
+            
+            announceArray.forEach((item) => {
+                alertDiv.append(item)
+                return item;
+            })
+        } else if ((daysTilXmas <= 45) && (daysTilAnniversary <= 60)) {
+            let announceArray = [xmasAnnoucement, anniversaryAnnoucement]
+
+            announceArray.forEach((item) => {
+                alertDiv.append(item)
+                return item;
+            })
+        } else if ((daysTilXmas <= 45) && (daysTilBirthdate <= 30)) {
+            let announceArray = [xmasAnnoucement, bdayAnnoucement]
+
+            announceArray.forEach((item) => {
+                alertDiv.append(item)
+                return item;
+            })
+        } else if ((daysTilAnniversary <= 60) && (daysTilBirthdate <= 30)) {
+            let announceArray = [anniversaryAnnoucement, bdayAnnoucement]
+
+            announceArray.forEach((item) => {
+                alertDiv.append(item)
+                return item;
+            })
+            
+        } else if ((daysTilXmas <= 45)) {   
+            alertDiv.append(xmasAnnoucement)
+        } else if ((daysTilAnniversary <= 60)) {
+            alertDiv.append(anniversaryAnnoucement)
+        } else if ((daysTilBirthdate <= 30)) {
+            alertDiv.append(bdayAnnoucement)
+        } else if (daysTilXmas === 365) {
+            alertDiv.append(xmasAnnoucement) 
+        } else if (daysTilAnniversary === 365) {
+            alertDiv.append(anniversaryAnnoucement) 
+        } else if (daysTilBirthdate === 365) {
+            alertDiv.append(bdayAnnoucement) 
+        } else {
+            alertDiv.classList = "hidden"
+        }
     }
 
     buildContactElement = function () {
