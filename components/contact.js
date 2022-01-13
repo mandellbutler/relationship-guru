@@ -132,6 +132,7 @@ class Contact {
         let alertDiv = document.createElement("div");
 
         alertDiv.setAttribute("id", `${this.firstName}-alertContainer`);
+        alertDiv.setAttribute("class", `alertContainers`);
 
         event.append(alertDiv);
 
@@ -245,6 +246,7 @@ class Contact {
         closeContactEl.setAttribute("id", `close-${this.firstName}`);
         closeContactEl.setAttribute("class", "close-buttons");
         contactAlertSec.setAttribute("id", `${this.firstName}-alert`);
+        contactAlertSec.setAttribute("class", `alertSections`);
 
         selectItem.innerHTML = `
         ${capFirst}

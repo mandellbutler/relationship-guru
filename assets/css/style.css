@@ -1,6 +1,7 @@
 * {
-    border: solid 1px red;
+    /* border: solid 1px red; */
     box-sizing: border-box;
+    background-color: #93BBA7;
 }
 
 body {
@@ -136,6 +137,16 @@ select {
     color: #477000;
     text-decoration: underline;
     
+}
+
+.infoSections,
+.info-containers,
+.infoLists,
+h3,
+.infoLists li,
+.alertSections,
+.alertContainers {
+    background-color: lightgrey;
 }
 
 .eventAlerts {
