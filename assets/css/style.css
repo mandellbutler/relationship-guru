@@ -25,6 +25,7 @@ a {
 
 /* Title/Description */
 #descriptionContainer {
+    border: solid 2px #477000;
     padding: 2px;
     margin: 8em 2em 2em;
 }
