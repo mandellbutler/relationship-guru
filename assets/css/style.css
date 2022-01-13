@@ -1,6 +1,7 @@
 * {
-    border: solid 1px red;
+    /* border: solid 1px red; */
     box-sizing: border-box;
+    background-color: #93BBA7;
 }
 
 body {
@@ -41,7 +42,6 @@ main {
 }
 
 #mainContainer {
-    border-right: solid #477000;
     padding-right: 1em;
 }
 
@@ -138,6 +138,19 @@ select {
     
 }
 
+.infoSections,
+.info-containers,
+.infoLists,
+h3,
+.infoLists li,
+.alertSections,
+.alertContainers,
+article,
+article p,
+article h2 {
+    background-color: lightgrey;
+}
+
 .eventAlerts {
     /* font-size: 1.5em; */
     border: solid 4px white;
@@ -170,7 +183,8 @@ ul {
 /* Article Section*/
 #articleContainer {
     padding-left: 1em;
-    margin-left:.5em
+    margin-left:.5em;
+    border-left: solid #477000;;
 }
 
 
