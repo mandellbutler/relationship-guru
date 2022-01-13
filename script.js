@@ -69,8 +69,6 @@ mainSelect.innerHTML = `
 
 articleContainer.innerHTML = `
 <article>
-<strong>Article Area</strong></br>
-<strong>Featured Article</strong>
 <p>**Image**</p>
 <h2>Title</h2>
 <p>orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.
@@ -79,7 +77,6 @@ orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Ne
 orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.<p>
 </article>
 <article>
-<strong>Archive:</strong>
 <p>**Image**</p>
 <h2>Title</h2>
 <p>orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.

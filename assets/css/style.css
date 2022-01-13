@@ -42,7 +42,6 @@ main {
 }
 
 #mainContainer {
-    border-right: solid #477000;
     padding-right: 1em;
 }
 
@@ -145,7 +144,10 @@ select {
 h3,
 .infoLists li,
 .alertSections,
-.alertContainers {
+.alertContainers,
+article,
+article p,
+article h2 {
     background-color: lightgrey;
 }
 
@@ -181,7 +183,8 @@ ul {
 /* Article Section*/
 #articleContainer {
     padding-left: 1em;
-    margin-left:.5em
+    margin-left:.5em;
+    border-left: solid #477000;;
 }
 
 
