@@ -69,7 +69,7 @@ mainSelect.innerHTML = `
 
 articleContainer.innerHTML = `
 <article>
-<p>**Image**</p>
+<img src="/assets/images/article.png" alt="pop art article image" class="articleImages">
 <h2>Title</h2>
 <p>orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.
 orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.
@@ -77,7 +77,7 @@ orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Ne
 orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.<p>
 </article>
 <article>
-<p>**Image**</p>
+<img src="/assets/images/article.png" alt="pop art article image" class="articleImages">
 <h2>Title</h2>
 <p>orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.
 orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.
@@ -85,10 +85,11 @@ orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Ne
 orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.<p>
 </article>
 <article>
-<p>**Image**</p>
+<img src="/assets/images/article.png" alt="pop art article image" class="articleImages">
 <h2>Another Placeholder</h2>
 </article>
 `
+//===================================
 footerContent.innerHTML =`
 <ul class="darkElements"><p class="darkElements">Footer Content Area</p>
 <li class="darkElements">Terms of Use</li>

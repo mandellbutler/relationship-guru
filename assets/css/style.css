@@ -108,8 +108,8 @@ select {
 }
 
 .contact-images {
-    height: 5em;
-    width: 5em;
+    height: 6em;
+    width: 6em;
 }
 
 .contact-titles {
@@ -185,6 +185,11 @@ ul {
     padding-left: 1em;
     margin-left:.5em;
     border-left: solid #477000;;
+}
+
+.articleImages {
+    height: 5em;
+    width: 5em;
 }
 
 
