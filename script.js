@@ -40,6 +40,7 @@ contactSection.setAttribute("id", "contactSection");
 articleContainer.setAttribute("id", "articleContainer");
 articleContainer.setAttribute("class", "containers");
 footerContent.setAttribute("id", "footer-content");
+footerContent.setAttribute("class", "darkElements");
 
 
 
@@ -92,10 +93,10 @@ orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Ne
 </article>
 `
 footerContent.innerHTML =`
-<ul><p>Footer Content Area</p>
-<li>Terms of Use</li>
-<li>Careers</li>
-<li>Another Placeholder</li>
+<ul class="darkElements"><p class="darkElements">Footer Content Area</p>
+<li class="darkElements">Terms of Use</li>
+<li class="darkElements">Careers</li>
+<li class="darkElements">Another Placeholder</li>
 </ul>
 `
 
