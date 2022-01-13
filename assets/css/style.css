@@ -19,6 +19,7 @@ body {
 
 a {
     color: white;
+    background-color: black;
 }
 
 /* Title/Description */
@@ -180,4 +181,9 @@ footer {
     background-color: black;
     color: white;
     padding: 1em;
+}
+
+
+.darkElements {
+    background-color: black;
 }
