@@ -92,7 +92,7 @@ orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Ne
 `
 //===================================
 footerContent.innerHTML =`
-<ul class="darkElements"><p class="darkElements">Footer Content Area</p>
+<ul class="darkElements">
 <li class="darkElements">Terms of Use</li>
 <li class="darkElements">Careers</li>
 <li class="darkElements">Another Placeholder</li>
