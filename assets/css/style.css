@@ -147,11 +147,11 @@ h3,
 .infoLists li,
 .alertSections,
 .alertContainers,
-article,
+/* article, */
 article p,
 article h2,
 article div,
-#archived,
+/* #archived, */
 #featuredSection,
 #archivedSection
  {
@@ -199,9 +199,20 @@ ul {
     width: 5em;
 }
 
-#archived article {
+#featured-title {
+    display: flex;
+    justify-content: center;
+    text-decoration: underline;
+}
+
+#featuredSection {
+    margin-bottom: 1em;
+}
+
+.archived-articles {
     display: flex;
     flex-direction: row;
+    margin-bottom: 1em;
 } 
 
 
