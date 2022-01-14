@@ -136,6 +136,7 @@ select {
 .close-buttons:hover {
     color: #477000;
     text-decoration: underline;
+    font-weight: bold;
     
 }
 
@@ -148,7 +149,12 @@ h3,
 .alertContainers,
 article,
 article p,
-article h2 {
+article h2,
+article div,
+#archived,
+#featuredSection,
+#archivedSection
+ {
     background-color: lightgrey;
 }
 
@@ -192,6 +198,11 @@ ul {
     height: 5em;
     width: 5em;
 }
+
+#archived article {
+    display: flex;
+    flex-direction: row;
+} 
 
 
 
