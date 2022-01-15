@@ -99,13 +99,13 @@ articleContainer.innerHTML = `
                 <div class="archContent">
                     <p>
                         LorenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel 
-                        <span id="showLess" class="hidden"> esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.
+                        <span id="showLess" style="display: none"> esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.
                             orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.
                             orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.
                             orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.
                         </span>
                     </p>
-                    <div id="toggle"></div>
+                    <button id="toggle"></button>
                 </div>
             </div>
         </article>
@@ -160,11 +160,16 @@ const showLess = document.getElementById("showLess");
 
 toggler.innerHTML = "Show More";
 
-
 toggler.addEventListener("click",  () => {
     console.log("Event: ", toggler.innerHTML)
 
-    showLess.classList.toggle("onDisplay");
-    toggler.innerHTML = "Show Less";
+    if (showLess.style.display === "none") {
+        showLess.style.display = "flex";
+        toggler.innerHTML = "Show Less";
+    } else if (showLess.style.display === "flex") {
+        showLess.style.display = "none"
+        toggler.innerHTML = "Show More";
+    }
+    
     
 })
