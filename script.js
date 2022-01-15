@@ -153,3 +153,18 @@ selectSection.append(mainSelect);
 mainContainer.append(contactSection);
 main.append(articleContainer);
 footer.append(footerContent);
+
+const toggler = document.getElementById("toggle");
+const showLess = document.getElementById("showLess");
+
+
+toggler.innerHTML = "Show More";
+
+
+toggler.addEventListener("click",  () => {
+    console.log("Event: ", toggler.innerHTML)
+
+    showLess.classList.toggle("onDisplay");
+    toggler.innerHTML = "Show Less";
+    
+})
