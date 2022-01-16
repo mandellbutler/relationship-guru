@@ -1,8 +1,9 @@
+//STEP 1: GRAB HTML ELEMENTS TO USE AS ANCHORS
 const header = document.getElementById("site-header");
 const main = document.getElementById("site-main");
 const footer = document.getElementById("site-footer");
 //====================CREATING ELEMENTS=================//
-
+//STEP 2: CREATE FUNCTIONS TO CREATE AND BUILD ELEMENTS
 //======HEADER======//
 function buildHeader () {
     //NavBar
@@ -222,6 +223,8 @@ function buildMain () {
         })
     
     }
+
+    //Placing Elements
     main.append(mainContainer);
     mainContainer.append(imageSection);
     imageSection.append(mainImg);
@@ -249,6 +252,8 @@ function buildFooter () {
 
 }
 
+//====================INIT FUNCTIONS=================//
+//STEP 3: INITIATE FUNCTIONS TO PLACE ELEMENTS ON PAGE
 buildHeader();
 buildMain();
 buildFooter();
