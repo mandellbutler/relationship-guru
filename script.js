@@ -67,64 +67,159 @@ mainSelect.innerHTML = `
 <option value="all">All</option>
 `
 
+function buildArticle () {
+    const articleArray = [
+        {
+            name: "artOne",
+            src: "/assets/images/article.png",
+            alt: "pop art article pic",
+            title: "This Is Article 1",
+            display: "LorenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel",
+            hidden: "esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus. \
+            orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.\
+            orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.\
+            orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus."
+        },
+        {
+            name: "artTwo",
+            src: "/assets/images/article.png",
+            alt: "pop art article pic",
+            title: "This Is Article 2",
+            display: "LorenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel",
+            hidden: "esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus. \
+            orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.\
+            orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.\
+            orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus."
+            
+        },
+        {
+            name: "artThree",
+            src: "/assets/images/article.png",
+            alt: "pop art article pic",
+            title: "This Is Article 3",
+            display: "LorenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel",
+            hidden: "esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus. \
+            orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.\
+            orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.\
+            orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus."
+            
+        }
+    ]
 
-articleContainer.innerHTML = `
-<section id="featuredSection">
-    <article id="featured">
-        <div id="featured-content">
-            <h2 id="featured-title">Title</h2>
-            <p> By: Author</p>
-            <p> Date: September 11, 2022</p>
-            <p> LorenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.
-                orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.
-                orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.
-                orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.
-            </p>
-            <p> LorenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.
-                orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.
-                orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.
-                orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.
-            </p>
-        </div>
-    </article>
-</section>
-<section id ="archivedSection">
-    <div id="archived">
-        <article class="archived-articles">
-            <div class="archived-images">
-                <img src="/assets/images/article.png" alt="pop art article image" class="articleImages">
-            </div>
-            <div class="archived-containers">
-                <h2>Title</h2>
-                <div class="archContent">
-                    <p>
-                        LorenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel 
-                        <span id="showLess" style="display: none"> esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.
-                            orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.
-                            orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.
-                            orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.
-                        </span>
+    articleContainer.innerHTML = `
+        <section id="featuredSection">
+            <article id="featured">
+                <div id="featured-content">
+                    <h2 id="featured-title">Title</h2>
+                    <p> By: Author</p>
+                    <p> Date: September 11, 2022</p>
+                    <p> LorenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.
+                        orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.
+                        orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.
+                        orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.
                     </p>
-                    <button id="toggle"></button>
+                    <p> LorenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.
+                        orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.
+                        orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.
+                        orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.
+                    </p>
                 </div>
+            </article>
+        </section>
+        <section id ="archivedSection">
+            <div id="archived">
+                <article class="archived-articles">
+                    <div class="archived-images">
+                        <img src="/assets/images/article.png" alt="pop art article image" class="articleImages">
+                    </div>
+                    <div class="archived-containers">
+                        <h2>${articleArray.title}</h2>
+                        <div class="archContent">
+                            <p id="${articleArray.name}-content>
+                                ${articleArray.content}
+                            </p>
+                            <button id="${articleArray.name}-toggle"></button>
+                        </div>
+                    </div>
+                </article>
+                <article class="archived-articles">
+                    <div class="archived-images">
+                        <img src="/assets/images/article.png" alt="pop art article image" class="articleImages">
+                    </div>
+                    <div class="archived-container">
+                        <h2>Another Placeholder</h2>
+                        <p>LorenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.
+                        orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.
+                        orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.
+                        orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.
+                        </p>
+                    </div>
+                </article>
             </div>
-        </article>
-        <article class="archived-articles">
-            <div class="archived-images">
-                <img src="/assets/images/article.png" alt="pop art article image" class="articleImages">
-            </div>
-            <div class="archived-container">
-                <h2>Another Placeholder</h2>
-                <p>LorenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.
-                orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.
-                orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.
-                orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.
-                </p>
-            </div>
-        </article>
-    </div>
-</section>
-`
+        </section>
+    `
+    main.append(articleContainer);
+    const archived = document.getElementById("archived");
+
+    articleArray.forEach((post) => {
+        const article = document.createElement("article");
+        const imgDiv = document.createElement("div");
+        const archivedDiv = document.createElement("div");
+        const archivedCont = document.createElement("div");
+        const content = document.createElement("p");
+        const button = document.createElement("button");
+
+        imgDiv.setAttribute("class", "archived-images");
+        article.setAttribute("class", "archived-articles");
+        archivedDiv.setAttribute("class", "archived-containers");
+        archivedCont.setAttribute("class", "archContent");
+        button.setAttribute("id", `${post.name}-toggle`);
+
+        article.innerHTML = `
+        <div class="archived-images">
+            <img src="${post.src}" alt="${post.alt}">
+        </div>
+        `
+
+        archivedDiv.innerHTML = `
+        <h2>${post.title}</h2>
+        `
+
+        content.innerHTML = `
+            ${post.display}<span id="${post.name}-showLess" style="display: none;">
+            ${post.hidden}
+            </span>
+        `
+
+        button.innerHTML = "Show More";
+
+        archived.append(article);
+
+        article.append(archivedDiv)
+        archivedDiv.append(archivedCont);
+        //once the content has been placed...
+        archivedCont.append(content);
+        //place the button with intial "show more" text...
+        archivedCont.append(button);
+        //then place event listener on the button element
+
+        const showLess = document.getElementById(`${post.name}-showLess`);
+
+        button.addEventListener("click",  (event) => {
+            console.log("Show Less: ", showLess)
+            if (showLess.style.display === "none") {
+                showLess.style.display = "flex";
+                event.target.innerHTML = "Show Less";
+            } else if (showLess.style.display === "flex") {
+                showLess.style.display = "none"
+                event.target.innerHTML = "Show More";
+            }
+            
+        })
+    })
+
+}
+
 
 
 //===================================
@@ -151,25 +246,7 @@ mainContainer.append(selectSection);
 selectSection.append(selectLabel);
 selectSection.append(mainSelect);
 mainContainer.append(contactSection);
-main.append(articleContainer);
+// main.append(articleContainer);
+buildArticle();
 footer.append(footerContent);
 
-const toggler = document.getElementById("toggle");
-const showLess = document.getElementById("showLess");
-
-
-toggler.innerHTML = "Show More";
-
-toggler.addEventListener("click",  () => {
-    console.log("Event: ", toggler.innerHTML)
-
-    if (showLess.style.display === "none") {
-        showLess.style.display = "flex";
-        toggler.innerHTML = "Show Less";
-    } else if (showLess.style.display === "flex") {
-        showLess.style.display = "none"
-        toggler.innerHTML = "Show More";
-    }
-    
-    
-})
