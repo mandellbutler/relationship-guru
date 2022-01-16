@@ -1,31 +1,122 @@
 const header = document.getElementById("site-header");
 const main = document.getElementById("site-main");
 const footer = document.getElementById("site-footer");
-//CREATING ELEMENTS
-const navContainer = document.createElement("div");
-const navBar = document.createElement("nav");
-const descriptionContainer = document.createElement("div");
-const titleElement = document.createElement("h1");
-const descriptionEl = document.createElement("p");
+//====================CREATING ELEMENTS=================//
+
+//======HEADER======//
+function buildHeader () {
+    //NavBar
+    const navContainer = document.createElement("div");
+    navContainer.setAttribute("id", "navContainer");
+    navContainer.setAttribute("class", "containers");
+    
+    const navBar = document.createElement("nav");
+    navBar.setAttribute("id", "navbar");
+    navBar.innerHTML = `
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Contacts</a>
+    <a href="#">Login</a>
+    `;
+
+    //Description
+    const descriptionContainer = document.createElement("div");
+    descriptionContainer.setAttribute("id", "descriptionContainer");
+
+    const titleElement = document.createElement("h1");
+    titleElement.setAttribute("id", "siteTitle");
+    titleElement.innerText = "Building Lasting Relationships!";
+
+    const descriptionEl = document.createElement("p");
+    descriptionEl.setAttribute("id", "site-description");
+    descriptionEl.setAttribute("style", "padding: .5em;");
+    descriptionEl.innerText = "lorenLorem ipsum dolor sit amet consectetur adipisicing elit. \
+    Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam \
+    repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus."
+
+    
+
+
+
+    //Placing Elements
+    header.append(navContainer);
+    header.append(descriptionContainer);
+    descriptionContainer.append(titleElement);
+    descriptionContainer.append(descriptionEl);
+    navContainer.append(navBar);
+
+    
+}
+
+
+//======MAIN======//
 const mainContainer = document.createElement("div");
+//Image Section
 const imageSection = document.createElement("section");
 const mainImg = document.createElement("img");
 const mainP = document.createElement("p");
+
+//Select Section
 const selectSection = document.createElement("section");
 const selectLabel = document.createElement("label");
 const mainSelect = document.createElement("select");
+
+//Contact Section
 const contactSection = document.createElement("section");
+
+//Article Area
 const articleContainer = document.createElement("div");
+const articleArray = [
+    {
+        name: "artOne",
+        src: "/assets/images/article.png",
+        alt: "pop art article pic",
+        title: "This Is Article 1",
+        display: "LorenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel",
+        hidden: "esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus. \
+        orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.\
+        orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.\
+        orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus."
+    },
+    {
+        name: "artTwo",
+        src: "/assets/images/article.png",
+        alt: "pop art article pic",
+        title: "This Is Article 2",
+        display: "LorenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel",
+        hidden: "esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus. \
+        orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.\
+        orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.\
+        orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus."
+        
+    },
+    {
+        name: "artThree",
+        src: "/assets/images/article.png",
+        alt: "pop art article pic",
+        title: "This Is Article 3",
+        display: "LorenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel",
+        hidden: "esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus. \
+        orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.\
+        orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.\
+        orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus."
+        
+    }
+]
+
+//=======FOOTER=======//
 const footerContent = document.createElement("div");
 
-//BUILDING ELEMENTS
-navContainer.setAttribute("id", "navContainer");
-navContainer.setAttribute("class", "containers");
-navBar.setAttribute("id", "navbar");
-descriptionContainer.setAttribute("id", "descriptionContainer");
-titleElement.setAttribute("id", "siteTitle");
-descriptionEl.setAttribute("id", "site-description");
-descriptionEl.setAttribute("style", "padding: .5em;");
+
+//====================BUILDING ELEMENTS=================//
+// //navbar
+// navContainer.setAttribute("id", "navContainer");
+// navContainer.setAttribute("class", "containers");
+// navBar.setAttribute("id", "navbar");
+// descriptionContainer.setAttribute("id", "descriptionContainer");
+// titleElement.setAttribute("id", "siteTitle");
+// descriptionEl.setAttribute("id", "site-description");
+// descriptionEl.setAttribute("style", "padding: .5em;");
 
 mainContainer.setAttribute("id", "mainContainer");
 mainContainer.setAttribute("class", "containers");
@@ -46,14 +137,14 @@ footerContent.setAttribute("class", "darkElements");
 
 
 
-navBar.innerHTML = `
-<a href="#">Home</a>
-<a href="#">About</a>
-<a href="#">Contacts</a>
-<a href="#">Login</a>
-`;
-titleElement.innerText = "Building Lasting Relationships!";
-descriptionEl.innerText = "lorenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus."
+// navBar.innerHTML = `
+// <a href="#">Home</a>
+// <a href="#">About</a>
+// <a href="#">Contacts</a>
+// <a href="#">Login</a>
+// `;
+// titleElement.innerText = "Building Lasting Relationships!";
+// descriptionEl.innerText = "lorenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus."
 mainP.innerText = `
 orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.
 orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.
@@ -68,44 +159,6 @@ mainSelect.innerHTML = `
 `
 
 function buildArticle () {
-    const articleArray = [
-        {
-            name: "artOne",
-            src: "/assets/images/article.png",
-            alt: "pop art article pic",
-            title: "This Is Article 1",
-            display: "LorenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel",
-            hidden: "esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus. \
-            orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.\
-            orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.\
-            orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus."
-        },
-        {
-            name: "artTwo",
-            src: "/assets/images/article.png",
-            alt: "pop art article pic",
-            title: "This Is Article 2",
-            display: "LorenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel",
-            hidden: "esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus. \
-            orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.\
-            orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.\
-            orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus."
-            
-        },
-        {
-            name: "artThree",
-            src: "/assets/images/article.png",
-            alt: "pop art article pic",
-            title: "This Is Article 3",
-            display: "LorenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel",
-            hidden: "esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus. \
-            orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.\
-            orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.\
-            orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus."
-            
-        }
-    ]
-
     articleContainer.innerHTML = `
         <section id="featuredSection">
             <article id="featured">
@@ -169,7 +222,6 @@ function buildArticle () {
         button.innerHTML = "Show More";
 
         archived.append(article);
-
         article.append(archivedDiv)
         archivedDiv.append(archivedCont);
         //once the content has been placed...
@@ -177,7 +229,6 @@ function buildArticle () {
         //place the button with intial "show more" text...
         archivedCont.append(button);
         //then place event listener on the button element
-
         const showLess = document.getElementById(`${post.name}-showLess`);
 
         button.addEventListener("click",  (event) => {
@@ -208,11 +259,12 @@ footerContent.innerHTML =`
 
 
 //PLACING ELEMENTS
-header.append(navContainer);
-header.append(descriptionContainer);
-descriptionContainer.append(titleElement);
-descriptionContainer.append(descriptionEl);
-navContainer.append(navBar);
+// header.append(navContainer);
+// header.append(descriptionContainer);
+// descriptionContainer.append(titleElement);
+// descriptionContainer.append(descriptionEl);
+// navContainer.append(navBar);
+buildHeader();
 main.append(mainContainer);
 mainContainer.append(imageSection);
 imageSection.append(mainImg);
