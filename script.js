@@ -127,35 +127,7 @@ function buildArticle () {
             </article>
         </section>
         <section id ="archivedSection">
-            <div id="archived">
-                <article class="archived-articles">
-                    <div class="archived-images">
-                        <img src="/assets/images/article.png" alt="pop art article image" class="articleImages">
-                    </div>
-                    <div class="archived-containers">
-                        <h2>${articleArray.title}</h2>
-                        <div class="archContent">
-                            <p id="${articleArray.name}-content>
-                                ${articleArray.content}
-                            </p>
-                            <button id="${articleArray.name}-toggle"></button>
-                        </div>
-                    </div>
-                </article>
-                <article class="archived-articles">
-                    <div class="archived-images">
-                        <img src="/assets/images/article.png" alt="pop art article image" class="articleImages">
-                    </div>
-                    <div class="archived-container">
-                        <h2>Another Placeholder</h2>
-                        <p>LorenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.
-                        orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.
-                        orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.
-                        orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.
-                        </p>
-                    </div>
-                </article>
-            </div>
+            <div id="archived"></div>
         </section>
     `
     main.append(articleContainer);
