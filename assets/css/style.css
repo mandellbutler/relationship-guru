@@ -152,7 +152,8 @@ article p,
 article h2,
 article div,
 /* #archived, */
-#featuredSection
+#featuredSection,
+#archived span 
  {
     background-color: lightgrey;
 }
@@ -214,6 +215,7 @@ ul {
 
 #featuredSection {
     margin-bottom: 1em;
+    padding: 2em;
 }
 
 #archivedSection {
