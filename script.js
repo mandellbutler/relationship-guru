@@ -127,6 +127,9 @@ function buildArticle () {
             </article>
         </section>
         <section id ="archivedSection">
+            <div>
+                <h2>You may also like:</h2>
+            </div>
             <div id="archived"></div>
         </section>
     `
@@ -144,17 +147,17 @@ function buildArticle () {
         imgDiv.setAttribute("class", "archived-images");
         article.setAttribute("class", "archived-articles");
         archivedDiv.setAttribute("class", "archived-containers");
-        archivedCont.setAttribute("class", "archContent");
+        archivedCont.setAttribute("class", "archived-content");
         button.setAttribute("id", `${post.name}-toggle`);
 
         article.innerHTML = `
         <div class="archived-images">
-            <img src="${post.src}" alt="${post.alt}">
+            <img src="${post.src}" alt="${post.alt}" class="articleImages">
         </div>
         `
 
         archivedDiv.innerHTML = `
-        <h2>${post.title}</h2>
+        <h3>${post.title}</h3>
         `
 
         content.innerHTML = `
