@@ -101,7 +101,7 @@ function buildMain () {
     articleContainer.setAttribute("class", "containers");
 
     const featuredArticle = {
-        title: "5 Essential Qualities of a Good Friend",
+        title: "Essential Tools for Better Communication",
         author: "James Cordell",
         date: "Septemeber 11, 2022",
         content: `<p> LorenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.
