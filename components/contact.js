@@ -148,17 +148,20 @@ class Contact {
         There are <span id="tilXmasAlert" class="daysTilAlerts"> ${daysTilXmas}</span> days until Christmas! Here is a great gift idea for ${capFirst}: ${this.displayGiftIdea()}!
         `
 
-        // alertDiv.append(xmasAnnoucement);
-
         //anniversary announcement element
         let anniversaryAnnoucement = document.createElement("p");
         anniversaryAnnoucement.setAttribute("id", `${this.firstName}-anniversaryAlert`);
         anniversaryAnnoucement.setAttribute("class", "eventAlerts");
 
-        anniversaryAnnoucement.innerHTML = `
-        There are <span id="tilAnniversaryAlert" class="daysTilAlerts">${daysTilAnniversary}</span> days until ${capFirst}'s Anniversary!!
-        `
-        // alertDiv.append(anniversaryAnnoucement);
+        if (daysTilAnniversary === 365) {
+            bdayAnnoucement.innerHTML = `
+            Be sure to wish ${capFirst} <span id="tilAnniversaryAlert" class="daysTilAlerts">Happy Anniversary</span> today!!
+            `
+        } else {
+            anniversaryAnnoucement.innerHTML = `
+            There are <span id="tilAnniversaryAlert" class="daysTilAlerts">${daysTilAnniversary}</span> days until ${capFirst}'s Anniversary!!
+            `
+        }
         
         //bday announcement element
         let bdayAnnoucement = document.createElement("p");
@@ -168,8 +171,6 @@ class Contact {
         bdayAnnoucement.innerHTML =`
         There are <span id="tilBdayAlert" class="daysTilAlerts">${daysTilBirthdate}</span> days until ${capFirst}'s Birthday!!
         `
-
-        alertDiv.append(bdayAnnoucement);
 
         if ((daysTilXmas <= 45) && (daysTilAnniversary <= 60) && (daysTilBirthdate <= 30)) {
             let announceArray = [xmasAnnoucement, anniversaryAnnoucement, bdayAnnoucement]
