@@ -5,7 +5,7 @@ const Jordan = new Contact (
     "jordan",
     "jacobs",
     "Brother",
-    "January 18, 1993",
+    "January 23, 1993",
     "",
     "Black",
     ["Headphones", "Gucci Socks", "A Handgun", "Pokemon"],

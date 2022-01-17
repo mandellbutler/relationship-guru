@@ -183,11 +183,15 @@ class Contact {
         bdayAnnoucement.setAttribute("id", `${this.firstName}-bdayAlert`);
         bdayAnnoucement.setAttribute("class", "eventAlerts");
 
-        if (daysTilBirthdate === 1) {
+        if (daysTilBirthdate === 365) {
+            bdayAnnoucement.innerHTML = `
+            ${capFirst}'s Birthday is <span id="tilAnniversaryAlert" class="daysTilAlerts">today</span>!!
+            `
+        } else if (daysTilBirthdate === 1) {
             bdayAnnoucement.innerHTML = `
             ${capFirst}'s Birthday is <span id="tilBdayAlert" class="daysTilAlerts">tomorrow</span>!
             `
-        }   else { bdayAnnoucement.innerHTML =`
+        }  else { bdayAnnoucement.innerHTML =`
             There are <span id="tilBdayAlert" class="daysTilAlerts">${daysTilBirthdate}</span> days until ${capFirst}'s Birthday!!
         `
         }
