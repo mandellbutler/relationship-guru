@@ -100,7 +100,7 @@ class Contact {
         let daysTilXmas = Math.ceil((xmasDate.getTime() - today.getTime()) / (day));
 
         //ANNIVERSARY
-        let date = "January 17, 2019";
+        let date = "January 24, 2019";
         let anniversary = new Date(date);
         let anniversaryDay = anniversary.getDate();
         let anniversaryMonth = anniversary.getMonth() + 1;
@@ -145,14 +145,18 @@ class Contact {
         xmasAnnoucement.setAttribute("id", `${this.firstName}-xmasAlert`);
         xmasAnnoucement.setAttribute("class", "eventAlerts");
 
-        if (daysTilXmas === 1) {
+        if (daysTilXmas === 365) {
             xmasAnnoucement.innerHTML = `
-            Christmas is <span id="tilBdayAlert" class="daysTilAlerts">tomorrow</span>!
+            Be sure to wish ${capFirst} a very <span id="tilXmasAlert" class="daysTilAlerts">Merry Christmas</span> today!!
+            `
+        } else if (daysTilXmas === 1) {
+            xmasAnnoucement.innerHTML = `
+            Christmas is <span id="tilXmasAlert" class="daysTilAlerts">tomorrow</span>!
             `
         } else {
             xmasAnnoucement.innerHTML = `
-        There are <span id="tilXmasAlert" class="daysTilAlerts"> ${daysTilXmas}</span> days until Christmas! Here is a great gift idea for ${capFirst}: ${this.displayGiftIdea()}!
-        `
+            There are <span id="tilXmasAlert" class="daysTilAlerts"> ${daysTilXmas}</span> days until Christmas! Here is a great gift idea for ${capFirst}: ${this.displayGiftIdea()}!
+            `
         }
 
         //anniversary announcement element
