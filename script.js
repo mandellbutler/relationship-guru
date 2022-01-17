@@ -3,7 +3,9 @@ const header = document.getElementById("site-header");
 const main = document.getElementById("site-main");
 const footer = document.getElementById("site-footer");
 //====================CREATING ELEMENTS=================//
+
 //STEP 2: CREATE FUNCTIONS TO CREATE AND BUILD ELEMENTS
+
 //======HEADER======//
 function buildHeader () {
     //NavBar
@@ -98,17 +100,37 @@ function buildMain () {
     articleContainer.setAttribute("id", "articleContainer");
     articleContainer.setAttribute("class", "containers");
 
-    const articleArray = [
+    const featuredArticle = {
+        title: "Essential Tools for Better Communication",
+        author: "James Cordell",
+        date: "Septemeber 11, 2022",
+        content: `<p> LorenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.
+            orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.
+            orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.
+            orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.
+        </p>
+        <p> LorenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.
+            orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.
+            orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.
+            orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.
+        </p>`
+    }
+
+    const archivedArray = [
         {
             name: "artOne",
             src: "/assets/images/article.png",
             alt: "pop art article pic",
             title: "This Is Article 1",
             display: "LorenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel",
-            hidden: "esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus. \
-            orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.\
-            orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.\
-            orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus."
+            hidden: "esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam\
+            dolore ut necessitatibus. LorenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque \
+            architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe \
+            aperiam dolore ut necessitatibus. LorenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas.\
+            Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque \
+            saepe aperiam dolore ut necessitatibus. LorenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, \
+            quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque \
+            saepe aperiam dolore ut necessitatibus."
         },
         {
             name: "artTwo",
@@ -116,10 +138,14 @@ function buildMain () {
             alt: "pop art article pic",
             title: "This Is Article 2",
             display: "LorenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel",
-            hidden: "esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus. \
-            orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.\
-            orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.\
-            orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus."
+            hidden: "esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam\
+            dolore ut necessitatibus. LorenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque \
+            architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe \
+            aperiam dolore ut necessitatibus. LorenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas.\
+            Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque \
+            saepe aperiam dolore ut necessitatibus. LorenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, \
+            quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque \
+            saepe aperiam dolore ut necessitatibus."
             
         },
         {
@@ -128,10 +154,14 @@ function buildMain () {
             alt: "pop art article pic",
             title: "This Is Article 3",
             display: "LorenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel",
-            hidden: "esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus. \
-            orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.\
-            orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.\
-            orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus."
+            hidden: "esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam\
+            dolore ut necessitatibus. LorenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque \
+            architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe \
+            aperiam dolore ut necessitatibus. LorenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas.\
+            Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque \
+            saepe aperiam dolore ut necessitatibus. LorenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, \
+            quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque \
+            saepe aperiam dolore ut necessitatibus."
             
         }
     ]
@@ -141,19 +171,12 @@ function buildMain () {
             <section id="featuredSection">
                 <article id="featured">
                     <div id="featured-content">
-                        <h2 id="featured-title">Title</h2>
-                        <p> By: Author</p>
-                        <p> Date: September 11, 2022</p>
-                        <p> LorenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.
-                            orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.
-                            orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.
-                            orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.
-                        </p>
-                        <p> LorenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.
-                            orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.
-                            orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.
-                            orenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus.
-                        </p>
+                        <h2 id="featured-title">${featuredArticle.title}</h2>
+                        <div id="article-credit">
+                            <p> By: ${featuredArticle.author}</p>
+                            <p> Date: ${featuredArticle.date}</p>
+                        </div>
+                        ${featuredArticle.content}
                     </div>
                 </article>
             </section>
@@ -167,7 +190,7 @@ function buildMain () {
         main.append(articleContainer);
         const archived = document.getElementById("archived");
     
-        articleArray.forEach((post) => {
+        archivedArray.forEach((post) => {
             const article = document.createElement("article");
             const imgDiv = document.createElement("div");
             const archivedDiv = document.createElement("div");
@@ -253,6 +276,7 @@ function buildFooter () {
 }
 
 //====================INIT FUNCTIONS=================//
+
 //STEP 3: INITIATE FUNCTIONS TO PLACE ELEMENTS ON PAGE
 buildHeader();
 buildMain();

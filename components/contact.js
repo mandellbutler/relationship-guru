@@ -83,17 +83,20 @@ class Contact {
         let firstStr = this.firstName;
         let capFirst = firstStr.charAt(0).toUpperCase() + firstStr.slice(1);
         
-        let today = new Date();
+        let today = new Date(); //using javascript date object to get current date
 
         //CHRISTMAS
         let xmasYear = today.getFullYear();
-
-        if (today.getMonth() == 11 && today.getDate() > 25) {
+            //if current year's xmas has passed...
+        if (today.getMonth() == 11 && today.getDate() > 25) { 
+            // set xmas date for following year.
             xmasYear = xmasYear + 1;
         }
         let xmasDate = new Date(xmasYear, 0, 25);
-        let day = 1000 * 60 * 60 * 24;
-
+        let day = 1000 * 60 * 60 * 24; //converts returned milliseconds into days
+        //getTime will return the num of milliseconds to next xmas...
+        //Math.ceil will round the num up to the nearest whole...
+        //then it will be converted into the num of days.
         let daysTilXmas = Math.ceil((xmasDate.getTime() - today.getTime()) / (day));
 
         //ANNIVERSARY
@@ -108,6 +111,7 @@ class Contact {
         }
 
         let anniversaryToConvert = anniversaryMonth + " " + anniversaryDay + ", " + newAnniversaryYear;
+        //takes in the numeric date from anniversaryToConvert variable and returns a javascript object
         let newAnniversary = new Date(anniversaryToConvert)
         let daysTilAnniversary = Math.ceil((newAnniversary.getTime() - today.getTime()) / (day));
 
@@ -144,7 +148,7 @@ class Contact {
         There are <span id="tilXmasAlert" class="daysTilAlerts"> ${daysTilXmas}</span> days until Christmas! Here is a great gift idea for ${capFirst}: ${this.displayGiftIdea()}!
         `
 
-        alertDiv.append(xmasAnnoucement);
+        // alertDiv.append(xmasAnnoucement);
 
         //anniversary announcement element
         let anniversaryAnnoucement = document.createElement("p");
@@ -154,7 +158,7 @@ class Contact {
         anniversaryAnnoucement.innerHTML = `
         There are <span id="tilAnniversaryAlert" class="daysTilAlerts">${daysTilAnniversary}</span> days until ${capFirst}'s Anniversary!!
         `
-        alertDiv.append(anniversaryAnnoucement);
+        // alertDiv.append(anniversaryAnnoucement);
         
         //bday announcement element
         let bdayAnnoucement = document.createElement("p");
