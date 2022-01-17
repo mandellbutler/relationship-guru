@@ -88,11 +88,11 @@ class Contact {
         //CHRISTMAS
         let xmasYear = today.getFullYear();
             //if current year's xmas has passed...
-        if (today.getMonth() == 11 && today.getDate() > 25) { 
+        if (today.getMonth() == 11 && today.getDate() >= 25) { 
             // set xmas date for following year.
             xmasYear = xmasYear + 1;
         }
-        let xmasDate = new Date(xmasYear, 0, 25);
+        let xmasDate = new Date(xmasYear, 11, 25);
         let day = 1000 * 60 * 60 * 24; //converts returned milliseconds into days
         //getTime will return the num of milliseconds to next xmas...
         //Math.ceil will round the num up to the nearest whole...
@@ -153,10 +153,12 @@ class Contact {
             xmasAnnoucement.innerHTML = `
             Christmas is <span id="tilXmasAlert" class="daysTilAlerts">tomorrow</span>!
             `
-        } else {
+        } else if (daysTilXmas <= 45) {
             xmasAnnoucement.innerHTML = `
             There are <span id="tilXmasAlert" class="daysTilAlerts"> ${daysTilXmas}</span> days until Christmas! Here is a great gift idea for ${capFirst}: ${this.displayGiftIdea()}!
             `
+        } else {
+            xmasAnnoucement.classList = "hidden"
         }
 
         //anniversary announcement element
@@ -172,10 +174,12 @@ class Contact {
             anniversaryAnnoucement.innerHTML = `
             ${capFirst}'s Anniversary is <span id="tilAnniversaryAlert" class="daysTilAlerts">tomorrow!</span>
             `
-        } else {
+        } else if (daysTilAnniversary <= 60) {
             anniversaryAnnoucement.innerHTML = `
             There are <span id="tilAnniversaryAlert" class="daysTilAlerts">${daysTilAnniversary}</span> days until ${capFirst}'s Anniversary!!
             `
+        } else {
+            anniversaryAnnoucement.classList = "hidden"
         }
         
         //bday announcement element
@@ -191,55 +195,22 @@ class Contact {
             bdayAnnoucement.innerHTML = `
             ${capFirst}'s Birthday is <span id="tilBdayAlert" class="daysTilAlerts">tomorrow</span>!
             `
-        }  else { bdayAnnoucement.innerHTML =`
+        }  else if (daysTilBirthdate <= 30) { 
+            bdayAnnoucement.innerHTML =`
             There are <span id="tilBdayAlert" class="daysTilAlerts">${daysTilBirthdate}</span> days until ${capFirst}'s Birthday!!
         `
+        }   else {
+            bdayAnnoucement.classList = "hidden"
         }
 
-        if ((daysTilXmas <= 45) && (daysTilAnniversary <= 60) && (daysTilBirthdate <= 30)) {
-            let announceArray = [xmasAnnoucement, anniversaryAnnoucement, bdayAnnoucement]
-            
-            announceArray.forEach((item) => {
-                alertDiv.append(item)
-                return item;
-            })
-        } else if ((daysTilXmas <= 45) && (daysTilAnniversary <= 60)) {
-            let announceArray = [xmasAnnoucement, anniversaryAnnoucement]
-
-            announceArray.forEach((item) => {
-                alertDiv.append(item)
-                return item;
-            })
-        } else if ((daysTilXmas <= 45) && (daysTilBirthdate <= 30)) {
-            let announceArray = [xmasAnnoucement, bdayAnnoucement]
-
-            announceArray.forEach((item) => {
-                alertDiv.append(item)
-                return item;
-            })
-        } else if ((daysTilAnniversary <= 60) && (daysTilBirthdate <= 30)) {
-            let announceArray = [anniversaryAnnoucement, bdayAnnoucement]
-
-            announceArray.forEach((item) => {
-                alertDiv.append(item)
-                return item;
-            })
-            
-        } else if ((daysTilXmas <= 45)) {   
-            alertDiv.append(xmasAnnoucement)
-        } else if ((daysTilAnniversary <= 60)) {
-            alertDiv.append(anniversaryAnnoucement)
-        } else if ((daysTilBirthdate <= 30)) {
-            alertDiv.append(bdayAnnoucement)
-        } else if (daysTilXmas === 365) {
-            alertDiv.append(xmasAnnoucement) 
-        } else if (daysTilAnniversary === 365) {
-            alertDiv.append(anniversaryAnnoucement) 
-        } else if (daysTilBirthdate === 365) {
-            alertDiv.append(bdayAnnoucement) 
-        } else {
-            alertDiv.classList = "hidden"
-        }
+        //Place all alerts to an array
+        let announceArray = [xmasAnnoucement, anniversaryAnnoucement, bdayAnnoucement]
+        //Iterate through the array and append each alert to its own div
+        announceArray.forEach((item) => {
+            alertDiv.append(item)
+            return item;
+        })
+        
     }
 
     buildContactElement = function () {
