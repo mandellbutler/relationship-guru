@@ -100,7 +100,7 @@ class Contact {
         let daysTilXmas = Math.ceil((xmasDate.getTime() - today.getTime()) / (day));
 
         //ANNIVERSARY
-        let date = "January 24, 2019";
+        let date = "January 17, 2019";
         let anniversary = new Date(date);
         let anniversaryDay = anniversary.getDate();
         let anniversaryMonth = anniversary.getMonth() + 1;
@@ -159,10 +159,14 @@ class Contact {
         let anniversaryAnnoucement = document.createElement("p");
         anniversaryAnnoucement.setAttribute("id", `${this.firstName}-anniversaryAlert`);
         anniversaryAnnoucement.setAttribute("class", "eventAlerts");
-
+        console.log("To Ann: ", daysTilAnniversary)
         if (daysTilAnniversary === 365) {
-            bdayAnnoucement.innerHTML = `
+            anniversaryAnnoucement.innerHTML = `
             Be sure to wish ${capFirst} <span id="tilAnniversaryAlert" class="daysTilAlerts">Happy Anniversary</span> today!!
+            `
+        } else if (daysTilAnniversary === 1) {
+            anniversaryAnnoucement.innerHTML = `
+            ${capFirst}'s Anniversary is <span id="tilAnniversaryAlert" class="daysTilAlerts">tomorrow!</span>
             `
         } else {
             anniversaryAnnoucement.innerHTML = `
