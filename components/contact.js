@@ -144,18 +144,33 @@ class Contact {
         let xmasAnnoucement = document.createElement("p");
         xmasAnnoucement.setAttribute("id", `${this.firstName}-xmasAlert`);
         xmasAnnoucement.setAttribute("class", "eventAlerts");
-        xmasAnnoucement.innerHTML = `
-        There are <span id="tilXmasAlert" class="daysTilAlerts"> ${daysTilXmas}</span> days until Christmas! Here is a great gift idea for ${capFirst}: ${this.displayGiftIdea()}!
-        `
+
+        if (daysTilXmas === 365) {
+            xmasAnnoucement.innerHTML = `
+            Be sure to wish ${capFirst} a very <span id="tilXmasAlert" class="daysTilAlerts">Merry Christmas</span> today!!
+            `
+        } else if (daysTilXmas === 1) {
+            xmasAnnoucement.innerHTML = `
+            Christmas is <span id="tilXmasAlert" class="daysTilAlerts">tomorrow</span>!
+            `
+        } else {
+            xmasAnnoucement.innerHTML = `
+            There are <span id="tilXmasAlert" class="daysTilAlerts"> ${daysTilXmas}</span> days until Christmas! Here is a great gift idea for ${capFirst}: ${this.displayGiftIdea()}!
+            `
+        }
 
         //anniversary announcement element
         let anniversaryAnnoucement = document.createElement("p");
         anniversaryAnnoucement.setAttribute("id", `${this.firstName}-anniversaryAlert`);
         anniversaryAnnoucement.setAttribute("class", "eventAlerts");
-
+        console.log("To Ann: ", daysTilAnniversary)
         if (daysTilAnniversary === 365) {
-            bdayAnnoucement.innerHTML = `
+            anniversaryAnnoucement.innerHTML = `
             Be sure to wish ${capFirst} <span id="tilAnniversaryAlert" class="daysTilAlerts">Happy Anniversary</span> today!!
+            `
+        } else if (daysTilAnniversary === 1) {
+            anniversaryAnnoucement.innerHTML = `
+            ${capFirst}'s Anniversary is <span id="tilAnniversaryAlert" class="daysTilAlerts">tomorrow!</span>
             `
         } else {
             anniversaryAnnoucement.innerHTML = `
@@ -168,9 +183,18 @@ class Contact {
         bdayAnnoucement.setAttribute("id", `${this.firstName}-bdayAlert`);
         bdayAnnoucement.setAttribute("class", "eventAlerts");
 
-        bdayAnnoucement.innerHTML =`
-        There are <span id="tilBdayAlert" class="daysTilAlerts">${daysTilBirthdate}</span> days until ${capFirst}'s Birthday!!
+        if (daysTilBirthdate === 365) {
+            bdayAnnoucement.innerHTML = `
+            ${capFirst}'s Birthday is <span id="tilAnniversaryAlert" class="daysTilAlerts">today</span>!!
+            `
+        } else if (daysTilBirthdate === 1) {
+            bdayAnnoucement.innerHTML = `
+            ${capFirst}'s Birthday is <span id="tilBdayAlert" class="daysTilAlerts">tomorrow</span>!
+            `
+        }  else { bdayAnnoucement.innerHTML =`
+            There are <span id="tilBdayAlert" class="daysTilAlerts">${daysTilBirthdate}</span> days until ${capFirst}'s Birthday!!
         `
+        }
 
         if ((daysTilXmas <= 45) && (daysTilAnniversary <= 60) && (daysTilBirthdate <= 30)) {
             let announceArray = [xmasAnnoucement, anniversaryAnnoucement, bdayAnnoucement]
@@ -252,7 +276,7 @@ class Contact {
         closeContactEl.setAttribute("class", "close-buttons");
         contactAlertSec.setAttribute("id", `${this.firstName}-alert`);
         contactAlertSec.setAttribute("class", `alertSections`);
-
+        //adds each contact's name as an option to the select menu
         selectItem.innerHTML = `
         ${capFirst}
         `
