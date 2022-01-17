@@ -168,9 +168,14 @@ class Contact {
         bdayAnnoucement.setAttribute("id", `${this.firstName}-bdayAlert`);
         bdayAnnoucement.setAttribute("class", "eventAlerts");
 
-        bdayAnnoucement.innerHTML =`
-        There are <span id="tilBdayAlert" class="daysTilAlerts">${daysTilBirthdate}</span> days until ${capFirst}'s Birthday!!
+        if (daysTilBirthdate === 1) {
+            bdayAnnoucement.innerHTML = `
+            ${capFirst}'s Birthday is <span id="tilBdayAlert" class="daysTilAlerts">tomorrow</span>!
+            `
+        }   else { bdayAnnoucement.innerHTML =`
+            There are <span id="tilBdayAlert" class="daysTilAlerts">${daysTilBirthdate}</span> days until ${capFirst}'s Birthday!!
         `
+        }
 
         if ((daysTilXmas <= 45) && (daysTilAnniversary <= 60) && (daysTilBirthdate <= 30)) {
             let announceArray = [xmasAnnoucement, anniversaryAnnoucement, bdayAnnoucement]
@@ -252,7 +257,7 @@ class Contact {
         closeContactEl.setAttribute("class", "close-buttons");
         contactAlertSec.setAttribute("id", `${this.firstName}-alert`);
         contactAlertSec.setAttribute("class", `alertSections`);
-
+        //adds each contact's name as an option to the select menu
         selectItem.innerHTML = `
         ${capFirst}
         `
