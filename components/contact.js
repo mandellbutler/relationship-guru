@@ -165,7 +165,7 @@ class Contact {
         let anniversaryAnnoucement = document.createElement("p");
         anniversaryAnnoucement.setAttribute("id", `${this.firstName}-anniversaryAlert`);
         anniversaryAnnoucement.setAttribute("class", "eventAlerts");
-        console.log("To Ann: ", daysTilAnniversary)
+        
         if (daysTilAnniversary === 365) {
             anniversaryAnnoucement.innerHTML = `
             Be sure to wish ${capFirst} <span id="tilAnniversaryAlert" class="daysTilAlerts">Happy Anniversary</span> today!!
@@ -203,7 +203,7 @@ class Contact {
             bdayAnnoucement.classList = "hidden"
         }
 
-        //Place all alerts to an array
+        //Place all alerts into an array
         let announceArray = [xmasAnnoucement, anniversaryAnnoucement, bdayAnnoucement]
         //Iterate through the array and append each alert to its own div
         announceArray.forEach((item) => {
@@ -220,33 +220,13 @@ class Contact {
         let lastStr = this.lastName;
         let capLast = lastStr.charAt(0).toUpperCase() + lastStr.slice(1);
 
+        //==============SELECT MENU
         const selectMenu = document.getElementById("contacts");
+
         const selectItem = document.createElement("option"); 
-        const contactSection = document.getElementById("contactSection");
-        const contactCard = document.createElement("div");
-        const contactInfoSec  = document.createElement("section");
-        const contactInfoContainer  = document.createElement("div");
-        const contactImgContainer  = document.createElement("div");
-        const closeContactEl = document.createElement("div");
-        const contactAlertSec  = document.createElement("section");
-        const giftDisplay = document.createElement("li");
-        const dateDisplay = document.createElement("li");
-
-
         selectItem.setAttribute("value", `${this.firstName}`);
         selectItem.setAttribute("id", `${this.firstName}-selectItem`);
-        contactCard.setAttribute("id", `${this.firstName}-card`);
-        contactCard.setAttribute("class", `contacts-hidden`);
-        contactInfoSec.setAttribute("id", `${this.firstName}-info`);
-        contactInfoSec.setAttribute("class", `infoSections`);
-        contactInfoContainer.setAttribute("id", `${this.firstName}-infoContainer`);
-        contactInfoContainer.setAttribute("class", "info-containers");
-        contactImgContainer.setAttribute("id", `${this.firstName}-imageContainer`);
-        contactImgContainer.setAttribute("class", "containers");
-        closeContactEl.setAttribute("id", `close-${this.firstName}`);
-        closeContactEl.setAttribute("class", "close-buttons");
-        contactAlertSec.setAttribute("id", `${this.firstName}-alert`);
-        contactAlertSec.setAttribute("class", `alertSections`);
+
         //adds each contact's name as an option to the select menu
         selectItem.innerHTML = `
         ${capFirst}
@@ -282,9 +262,27 @@ class Contact {
             }
         })
 
+
+        //==============CONTACT'S CARD
+        const contactSection = document.getElementById("contactSection");
+        const contactCard = document.createElement("div");
+        contactCard.setAttribute("id", `${this.firstName}-card`);
+        contactCard.setAttribute("class", `contacts-hidden`);
+
+        const contactInfoSec  = document.createElement("section");
+        contactInfoSec.setAttribute("id", `${this.firstName}-info`);
+        contactInfoSec.setAttribute("class", `infoSections`);
+
+        const contactImgContainer  = document.createElement("div");
+        contactImgContainer.setAttribute("id", `${this.firstName}-imageContainer`);
+        contactImgContainer.setAttribute("class", "containers");
         contactImgContainer.innerHTML = `
         <img ${this.image.src} ${this.image.alt} class="contact-images">
         `
+
+        const contactInfoContainer  = document.createElement("div");
+        contactInfoContainer.setAttribute("id", `${this.firstName}-infoContainer`);
+        contactInfoContainer.setAttribute("class", "info-containers");
         contactInfoContainer.innerHTML = `
         <ul id="${this.firstName}-infoList" class="infoLists">
         <h3 id="${this.firstName}-title" class="contact-titles">${capFirst} ${capLast}</h3>
@@ -294,7 +292,12 @@ class Contact {
         <li>Favorite Color: ${this.favoriteColor}</li>
         </ul>
         `
+
+        const closeContactEl = document.createElement("div");
+        closeContactEl.setAttribute("id", `close-${this.firstName}`);
+        closeContactEl.setAttribute("class", "close-buttons");
         closeContactEl.innerHTML = `x`;
+
         //event listener for close element
         closeContactEl.addEventListener("click", () => {
             const contactCard = document.getElementById(`${this.firstName}-card`);
@@ -303,6 +306,8 @@ class Contact {
 
         })
 
+        
+        const giftDisplay = document.createElement("li");
         giftDisplay.setAttribute("id", `${this.firstName}-giftIdeas`);
         if (this.giftIdeas.length === 0) {
             giftDisplay.classList = "hidden"
@@ -310,6 +315,11 @@ class Contact {
             giftDisplay.classList = "giftIdeas"
         }
 
+        giftDisplay.innerHTML = `
+        Gift Idea: ${this.displayGiftIdea()}
+        `
+
+        const dateDisplay = document.createElement("li");
         dateDisplay.setAttribute("id", `${this.firstName}-dateIdeas`);
         if (this.dateIdeas.length === 0) {
             dateDisplay.classList = "hidden"
@@ -317,14 +327,16 @@ class Contact {
             dateDisplay.classList = "dateIdeas"
         }
 
-        giftDisplay.innerHTML = `
-        Gift Idea: ${this.displayGiftIdea()}
-        `
         dateDisplay.innerHTML = `
         Date Idea: ${this.displayDateIdea()}
         `
 
-        selectMenu.append(selectItem); //populates the select menu with <option> contact's name </option>
+        const contactAlertSec  = document.createElement("section");
+        contactAlertSec.setAttribute("id", `${this.firstName}-alert`);
+        contactAlertSec.setAttribute("class", `alertSections`);
+
+        //populates the select menu with <option> contact's name </option>
+        selectMenu.append(selectItem); 
         contactSection.append(contactCard);
         contactCard.append(contactInfoSec);
         contactInfoSec.append(contactImgContainer);
@@ -337,6 +349,10 @@ class Contact {
         contactCard.append(contactAlertSec);
     }
 
+    renderContact = function (buildContactElement, announceEvent) {
+        buildContactElement = this.buildContactElement();
+        announceEvent = this.announceEvent();
+    }
 
 }
 
