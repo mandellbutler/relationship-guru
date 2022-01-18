@@ -20,4 +20,4 @@ Carol.renderContact();
 // Carol.buildContactElement();
 // Carol.announceEvent();
 
-export default Jordan;
+export default Carol;

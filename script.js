@@ -18,7 +18,7 @@ function buildHeader () {
     navBar.innerHTML = `
     <a href="#">Home</a>
     <a href="#">About</a>
-    <a href="#">Contacts</a>
+    <a href="#selectSection">Contacts</a>
     <a href="#">Login</a>
     `;
 
@@ -89,7 +89,7 @@ function buildMain () {
     <option value="none">--Choose Contact--</option>
     <option value="all">All</option>
     `
-     
+
     //Contact Section
     const contactSection = document.createElement("section");
     contactSection.setAttribute("id", "contactSection");
@@ -122,7 +122,7 @@ function buildMain () {
             name: "artOne",
             src: "/assets/images/article.png",
             alt: "pop art article pic",
-            title: "This Is Article 1",
+            title: "3 Must-Have Gifts for The Holidays:",
             display: "LorenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel",
             hidden: "esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam\
             dolore ut necessitatibus. LorenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque \
@@ -137,7 +137,7 @@ function buildMain () {
             name: "artTwo",
             src: "/assets/images/article.png",
             alt: "pop art article pic",
-            title: "This Is Article 2",
+            title: "5 Qualities of a Perfect Mate:",
             display: "LorenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel",
             hidden: "esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam\
             dolore ut necessitatibus. LorenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque \
@@ -153,7 +153,7 @@ function buildMain () {
             name: "artThree",
             src: "/assets/images/article.png",
             alt: "pop art article pic",
-            title: "This Is Article 3",
+            title: "How to Let Go of a Bad Relationship:",
             display: "LorenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel",
             hidden: "esse odit, labore suscipit dicta exercitationem ullam repellendus aliquam at autem cumque saepe aperiam\
             dolore ut necessitatibus. LorenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque \
