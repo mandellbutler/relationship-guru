@@ -89,6 +89,7 @@ function buildMain () {
     <option value="none">--Choose Contact--</option>
     <option value="all">All</option>
     `
+     
     //Contact Section
     const contactSection = document.createElement("section");
     contactSection.setAttribute("id", "contactSection");
