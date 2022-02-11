@@ -9,10 +9,7 @@ const footer = document.getElementById("site-footer");
 //======HEADER======//
 function buildHeader () {
     //NavBar
-    const navContainer = document.createElement("div");
-    navContainer.setAttribute("id", "navContainer");
-    navContainer.setAttribute("class", "containers");
-    
+    const navContainer = document.getElementById("navContainer");
     const navBar = document.createElement("nav");
     navBar.setAttribute("id", "navbar");
     navBar.innerHTML = `
@@ -23,8 +20,7 @@ function buildHeader () {
     `;
 
     //Description
-    const descriptionContainer = document.createElement("div");
-    descriptionContainer.setAttribute("id", "descriptionContainer");
+    const descriptionContainer = document.getElementById("descriptionContainer");
 
     const titleElement = document.createElement("h1");
     titleElement.setAttribute("id", "siteTitle");
