@@ -34,8 +34,6 @@ function buildHeader () {
     repellendus aliquam at autem cumque saepe aperiam dolore ut necessitatibus."
 
     //Placing Elements
-    header.append(navContainer);
-    header.append(descriptionContainer);
     descriptionContainer.append(titleElement);
     descriptionContainer.append(descriptionEl);
     navContainer.append(navBar);
