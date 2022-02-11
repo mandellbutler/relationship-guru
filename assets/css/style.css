@@ -6,6 +6,7 @@
 
 body {
     margin: 0px;
+    min-width: 360px;
 }
 
 /* ==========HEADER============ */
@@ -65,6 +66,7 @@ img {
 
 select {
     background-color: lightgray;
+    width: 75%;
 }
 
 #contactSection {
@@ -193,9 +195,7 @@ ul {
 
 /* Article Section*/
 #articleContainer {
-    /* padding-left: 1em; */
     margin: 0 auto;
-    /* border-left: solid #477000;; */
 }
 
 .archived-images {
@@ -215,7 +215,7 @@ ul {
 
 #featuredSection {
     margin-bottom: 1em;
-    padding: 2em;
+    padding: .5em;
 }
 
 #archivedSection {
@@ -296,6 +296,11 @@ footer {
         padding-left: 1em;
         margin-left:.5em;
         border-left: solid #477000;;
+    }
+
+    #featuredSection {
+        margin-bottom: 1em;
+        padding: 2em;
     }
 
     #archived {
