@@ -64,18 +64,22 @@ class Contact {
 
     }
 
-    displayDateIdea = function () {
-        let randomDate = this.dateIdeas[
-            Math.floor(Math.random() * this.dateIdeas.length)
-          ];
-        return randomDate;
-    }
-
-    displayGiftIdea = function () {
-        let randomGift = this.giftIdeas[
-            Math.floor(Math.random() * this.giftIdeas.length)
-          ];
-        return randomGift;
+    displayIdea = function (type) {
+        //to display idea for gift
+        if (type.toLowerCase() === "gift") {
+            let giftIdea = this.giftIdeas[
+                Math.floor(Math.random() * this.giftIdeas.length)
+            ];
+            return giftIdea;
+        //to display idea for date
+        } else if (type.toLowerCase() === "date") {
+            let dateIdea = this.dateIdeas[
+                Math.floor(Math.random() * this.dateIdeas.length)
+              ];
+            return dateIdea;
+        } else {
+            console.log("Invalid Input!")
+        }
     }
 
     announceEvent = function () {
@@ -316,7 +320,7 @@ class Contact {
         }
 
         giftDisplay.innerHTML = `
-        Gift Idea: ${this.displayGiftIdea()}
+        Gift Idea: ${this.displayIdea("gift")}
         `
 
         const dateDisplay = document.createElement("li");
@@ -328,7 +332,7 @@ class Contact {
         }
 
         dateDisplay.innerHTML = `
-        Date Idea: ${this.displayDateIdea()}
+        Date Idea: ${this.displayIdea("date")}
         `
 
         const contactAlertSec  = document.createElement("section");
