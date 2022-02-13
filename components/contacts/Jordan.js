@@ -16,7 +16,7 @@ const Jordan = new Contact (
     }
 )
 
-Jordan.renderContact();
-// Jordan.announceEvent();
+Jordan.buildContactElement();
+Jordan.announceEvent();
 
 export default Jordan;
