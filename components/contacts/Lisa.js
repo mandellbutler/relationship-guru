@@ -16,8 +16,7 @@ const Lisa = new Contact (
     }
 )
 
-Lisa.renderContact();
-// Lisa.buildContactElement();
-// Lisa.announceEvent();
+Lisa.buildContactElement();
+Lisa.announceEvent();
 
 export default Lisa;

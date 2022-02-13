@@ -353,11 +353,6 @@ class Contact {
         contactCard.append(contactAlertSec);
     }
 
-    renderContact = function (buildContactElement, announceEvent) {
-        buildContactElement = this.buildContactElement();
-        announceEvent = this.announceEvent();
-    }
-
 }
 
 export default Contact;
