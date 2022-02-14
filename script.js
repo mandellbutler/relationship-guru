@@ -129,7 +129,7 @@ function buildMain () {
         },
         {
             name: "artTwo",
-            src: "/assets/images/article.png",
+            src: "assets/images/article.png",
             alt: "pop art article pic",
             title: "5 Qualities of a Perfect Mate:",
             display: "LorenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel",
@@ -145,7 +145,7 @@ function buildMain () {
         },
         {
             name: "artThree",
-            src: "/assets/images/article.png",
+            src: "assets/images/article.png",
             alt: "pop art article pic",
             title: "How to Let Go of a Bad Relationship:",
             display: "LorenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel",

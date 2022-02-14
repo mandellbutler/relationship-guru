@@ -11,7 +11,7 @@ const Kyle = new Contact (
     ["Dinner Set", "Jogging Suit", "Art Supplies", "Tennis Balls"],
     [],
     {
-        "src": "src=../assets/images/contact.jpg",
+        "src": "src=assets/images/contact.jpg",
         "alt": "alt=graphic image of annonymous user"
     }
 )

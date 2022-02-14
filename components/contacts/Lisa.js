@@ -11,7 +11,7 @@ const Lisa = new Contact (
     ["Kit Kats", "Canon Camera", "Photography Books", "Cook Books"],
     [],
     {
-        "src": "src=../assets/images/contact.jpg",
+        "src": "src=assets/images/contact.jpg",
         "alt": "alt=graphic image of annonymous user"
     }
 )
