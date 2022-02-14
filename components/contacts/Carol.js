@@ -4,7 +4,7 @@ const Carol = new Contact (
     4,
     "carol",
     "jacobs",
-    "Sister",
+    "wife",
     "June 23, 1986",
     "",
     "Royale Blue",
@@ -16,8 +16,9 @@ const Carol = new Contact (
     }
 )
 
-Carol.renderContact();
-// Carol.buildContactElement();
-// Carol.announceEvent();
+Carol.buildContactElement();
+Carol.announceEvent("Birthday");
+Carol.announceEvent("Valentine's Day");
+Carol.announceEvent("Anniversary", "March 3, 1992");
 
 export default Carol;

@@ -17,6 +17,7 @@ const Lisa = new Contact (
 )
 
 Lisa.buildContactElement();
-Lisa.announceEvent();
+Lisa.announceEvent("Anniversary", "March 13");
+
 
 export default Lisa;

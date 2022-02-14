@@ -17,6 +17,8 @@ const Kyle = new Contact (
 )
 
 Kyle.buildContactElement();
-Kyle.announceEvent();
+Kyle.announceEvent("Birthday");
+Kyle.announceEvent("Graduation Day", "March 1");
+Kyle.announceEvent("Engagement", "February 13");
 
 export default Kyle;
