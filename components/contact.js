@@ -311,7 +311,15 @@ class Contact {
                 `
             }
                 
-        } 
+        } else if (eventName === "Anniversary") {
+            if (daysTilEvent === 1) {
+                alertEl.innerHTML = `
+                ${capFirst} & ${capPart}'s ${eventName} is <span id="tilAnniversaryAlert" class="daysTilAlerts">tomorrow</span>!
+                `
+            } 
+        }
+            
+        event.append(alertEl);
 
     }
 
