@@ -295,6 +295,22 @@ class Contact {
             <There are ${daysTilEvent} days until <span id="tilValentineAlert" class="daysTilAlerts">${eventName}</span>!
             `
             }
+        } else if (eventName === "Birthday") {
+            if (daysTilEvent === 1) {
+                alertEl.innerHTML = `
+                Tomorrow is <span id="tilAnniversaryAlert" class="daysTilAlerts">tomorrow</span>!
+                `
+            } else if (daysTilEvent === 365) {
+                alertEl.classList = "eventAlerts"
+                alertEl.innerHTML = `
+                Be sure to wish ${capFirst} a very <span id="tilBdayAlert" class="daysTilAlerts">Happy ${eventName}</span>!
+                `
+            } else {
+                alertEl.innerHTML = `
+                There are <span id="tilBdayAlert" class="daysTilAlerts">${daysTilEvent}</span> days until ${capFirst}'s ${eventName}!
+                `
+            }
+                
         } 
 
     }
