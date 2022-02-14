@@ -164,7 +164,7 @@ class Contact {
         } else if (eventName === "Birthday") {
             if (daysTilEvent === 1) {
                 alertEl.innerHTML = `
-                Tomorrow is <span id="tilAnniversaryAlert" class="daysTilAlerts">tomorrow</span>!
+                ${capFirst}'s Birthday is <span id="tilAnniversaryAlert" class="daysTilAlerts">tomorrow</span>!
                 `
             } else if (daysTilEvent === 365) {
                 alertEl.classList = "eventAlerts"
