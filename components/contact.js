@@ -321,6 +321,17 @@ class Contact {
                 alertEl.innerHTML = `
                 Be sure to wish ${capFirst} & ${capPart} a very <span id="tilAnniversaryAlert" class="daysTilAlerts">Happy ${eventName}</span>!
                 `
+            } else {
+                alertEl.innerHTML = `
+                There are <span id="tilAnniversaryAlert" class="daysTilAlerts">${daysTilEvent}</span> days until ${capFirst} and ${capPart}'s ${eventName}!
+                `
+            }
+            
+        } else {
+            if (daysTilEvent === 1) {
+                alertEl.innerHTML = `
+                ${eventName} is <span class="daysTilAlerts">tomorrow!</span>
+                `
             } 
         }
             
