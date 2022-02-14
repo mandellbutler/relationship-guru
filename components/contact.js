@@ -82,140 +82,6 @@ class Contact {
         }
     }
 
-    // announceEvent = function () {
-    //     //Format first letter in names to caps
-    //     let firstStr = this.firstName;
-    //     let capFirst = firstStr.charAt(0).toUpperCase() + firstStr.slice(1);
-        
-    //     let today = new Date(); //using javascript date object to get current date
-
-    //     //CHRISTMAS
-    //     let xmasYear = today.getFullYear();
-    //         //if current year's xmas has passed...
-    //     if (today.getMonth() == 11 && today.getDate() >= 25) { 
-    //         // set xmas date for following year.
-    //         xmasYear = xmasYear + 1;
-    //     }
-    //     let xmasDate = new Date(xmasYear, 11, 25);
-    //     let day = 1000 * 60 * 60 * 24; //converts returned milliseconds into days
-    //     //getTime will return the num of milliseconds to next xmas...
-    //     //Math.ceil will round the num up to the nearest whole...
-    //     //then it will be converted into the num of days.
-    //     let daysTilXmas = Math.ceil((xmasDate.getTime() - today.getTime()) / (day));
-
-    //     //ANNIVERSARY
-    //     let date = "January 24, 2019";
-    //     let anniversary = new Date(date);
-    //     let anniversaryDay = anniversary.getDate();
-    //     let anniversaryMonth = anniversary.getMonth() + 1;
-    //     let newAnniversaryYear = today.getFullYear();
-
-    //     if ((today.getMonth() > (anniversaryMonth - 1)) || ((today.getMonth() == (anniversaryMonth - 1)) && (today.getDate() >= anniversaryDay))){
-    //         newAnniversaryYear = newAnniversaryYear + 1;
-    //     }
-
-    //     let anniversaryToConvert = anniversaryMonth + " " + anniversaryDay + ", " + newAnniversaryYear;
-    //     //takes in the numeric date from anniversaryToConvert variable and returns a javascript object
-    //     let newAnniversary = new Date(anniversaryToConvert)
-    //     let daysTilAnniversary = Math.ceil((newAnniversary.getTime() - today.getTime()) / (day));
-
-    //     //BIRTHDAY
-    //     let birthdate = new Date(this.birthdate)
-    //     let birthDay = birthdate.getDate();
-    //     let birthMonth = (birthdate.getMonth() +1);
-    //     let newBirthYear = today.getFullYear();
-
-
-    //     if ((today.getMonth() > (birthMonth - 1)) || ((today.getMonth() == (birthMonth - 1)) && (today.getDate() >= birthDay))){
-    //         newBirthYear = newBirthYear + 1;
-    //     }
-    //     ;
-
-    //     let bdayToConvert = birthMonth + " " + birthDay + ", " + newBirthYear;
-    //     let newBday = new Date(bdayToConvert);
-    //     let daysTilBirthdate = Math.ceil((newBday.getTime() - today.getTime()) / (day));
-
-    //     //BUILD ALERT ELEMENTS
-    //     let event = document.getElementById(`${this.firstName}-alert`)
-    //     let alertDiv = document.createElement("div");
-
-    //     alertDiv.setAttribute("id", `${this.firstName}-alertContainer`);
-    //     alertDiv.setAttribute("class", `alertContainers`);
-
-    //     event.append(alertDiv);
-
-    //     //xmas announcement element
-    //     let xmasAnnoucement = document.createElement("p");
-    //     xmasAnnoucement.setAttribute("id", `${this.firstName}-xmasAlert`);
-    //     xmasAnnoucement.setAttribute("class", "eventAlerts");
-
-    //     if (daysTilXmas === 365) {
-    //         xmasAnnoucement.innerHTML = `
-    //         Be sure to wish ${capFirst} a very <span id="tilXmasAlert" class="daysTilAlerts">Merry Christmas</span> today!!
-    //         `
-    //     } else if (daysTilXmas === 1) {
-    //         xmasAnnoucement.innerHTML = `
-    //         Christmas is <span id="tilXmasAlert" class="daysTilAlerts">tomorrow</span>!
-    //         `
-    //     } else if (daysTilXmas <= 45) {
-    //         xmasAnnoucement.innerHTML = `
-    //         There are <span id="tilXmasAlert" class="daysTilAlerts"> ${daysTilXmas}</span> days until Christmas! Here is a great gift idea for ${capFirst}: ${this.displayGiftIdea()}!
-    //         `
-    //     } else {
-    //         xmasAnnoucement.classList = "hidden"
-    //     }
-
-    //     //anniversary announcement element
-    //     let anniversaryAnnoucement = document.createElement("p");
-    //     anniversaryAnnoucement.setAttribute("id", `${this.firstName}-anniversaryAlert`);
-    //     anniversaryAnnoucement.setAttribute("class", "eventAlerts");
-        
-    //     if (daysTilAnniversary === 365) {
-    //         anniversaryAnnoucement.innerHTML = `
-    //         Be sure to wish ${capFirst} <span id="tilAnniversaryAlert" class="daysTilAlerts">Happy Anniversary</span> today!!
-    //         `
-    //     } else if (daysTilAnniversary === 1) {
-    //         anniversaryAnnoucement.innerHTML = `
-    //         ${capFirst}'s Anniversary is <span id="tilAnniversaryAlert" class="daysTilAlerts">tomorrow!</span>
-    //         `
-    //     } else if (daysTilAnniversary <= 60) {
-    //         anniversaryAnnoucement.innerHTML = `
-    //         There are <span id="tilAnniversaryAlert" class="daysTilAlerts">${daysTilAnniversary}</span> days until ${capFirst}'s Anniversary!!
-    //         `
-    //     } else {
-    //         anniversaryAnnoucement.classList = "hidden"
-    //     }
-        
-    //     //bday announcement element
-    //     let bdayAnnoucement = document.createElement("p");
-    //     bdayAnnoucement.setAttribute("id", `${this.firstName}-bdayAlert`);
-    //     bdayAnnoucement.setAttribute("class", "eventAlerts");
-
-    //     if (daysTilBirthdate === 365) {
-    //         bdayAnnoucement.innerHTML = `
-    //         ${capFirst}'s Birthday is <span id="tilAnniversaryAlert" class="daysTilAlerts">today</span>!!
-    //         `
-    //     } else if (daysTilBirthdate === 1) {
-    //         bdayAnnoucement.innerHTML = `
-    //         ${capFirst}'s Birthday is <span id="tilBdayAlert" class="daysTilAlerts">tomorrow</span>!
-    //         `
-    //     }  else if (daysTilBirthdate <= 30) { 
-    //         bdayAnnoucement.innerHTML =`
-    //         There are <span id="tilBdayAlert" class="daysTilAlerts">${daysTilBirthdate}</span> days until ${capFirst}'s Birthday!!
-    //     `
-    //     }   else {
-    //         bdayAnnoucement.classList = "hidden"
-    //     }
-
-    //     //Place all alerts into an array
-    //     let announceArray = [xmasAnnoucement, anniversaryAnnoucement, bdayAnnoucement]
-    //     //Iterate through the array and append each alert to its own div
-    //     announceArray.forEach((item) => {
-    //         alertDiv.append(item)
-    //         return item;
-    //     })
-        
-    // }
 
     announceEvent = function (eventName, eventDate) {
         //Format first letter in names to caps
@@ -311,7 +177,40 @@ class Contact {
                 `
             }
                 
-        } 
+        } else if (eventName === "Anniversary") {
+            if (daysTilEvent === 1) {
+                alertEl.innerHTML = `
+                ${capFirst} & ${capPart}'s ${eventName} is <span id="tilAnniversaryAlert" class="daysTilAlerts">tomorrow</span>!
+                `
+            } else if (daysTilEvent === 365) {
+                alertEl.classList = "eventAlerts"
+                alertEl.innerHTML = `
+                Be sure to wish ${capFirst} & ${capPart} a very <span id="tilAnniversaryAlert" class="daysTilAlerts">Happy ${eventName}</span>!
+                `
+            } else {
+                alertEl.innerHTML = `
+                There are <span id="tilAnniversaryAlert" class="daysTilAlerts">${daysTilEvent}</span> days until ${capFirst} and ${capPart}'s ${eventName}!
+                `
+            }
+            
+        } else {
+            if (daysTilEvent === 1) {
+                alertEl.innerHTML = `
+                ${eventName} is <span class="daysTilAlerts">tomorrow!</span>
+                `
+            } else if (daysTilEvent === 365) {
+                alertEl.classList = "eventAlerts"
+                alertEl.innerHTML = `
+                ${eventName} is <span class="daysTilAlerts">today</span>!!!
+                `
+            } else {
+                alertEl.innerHTML = `
+                There are <span class="daysTilAlerts">${daysTilEvent}</span> days until ${eventName}!
+                `
+            }
+        }
+            
+        event.append(alertEl);
 
     }
 
