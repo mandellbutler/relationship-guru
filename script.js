@@ -114,7 +114,7 @@ function buildMain () {
     const archivedArray = [
         {
             name: "artOne",
-            src: "/assets/images/article.png",
+            src: "assets/images/article.png",
             alt: "pop art article pic",
             title: "3 Must-Have Gifts for The Holidays:",
             display: "LorenLorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quas. Neque architecto vel",
