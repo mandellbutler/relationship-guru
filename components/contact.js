@@ -332,7 +332,16 @@ class Contact {
                 alertEl.innerHTML = `
                 ${eventName} is <span class="daysTilAlerts">tomorrow!</span>
                 `
-            } 
+            } else if (daysTilEvent === 365) {
+                alertEl.classList = "eventAlerts"
+                alertEl.innerHTML = `
+                ${eventName} is <span class="daysTilAlerts">today</span>!!!
+                `
+            } else {
+                alertEl.innerHTML = `
+                There are <span class="daysTilAlerts">${daysTilEvent}</span> days until ${eventName}!
+                `
+            }
         }
             
         event.append(alertEl);
