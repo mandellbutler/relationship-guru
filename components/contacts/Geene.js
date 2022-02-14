@@ -11,7 +11,7 @@ const Geene = new Contact (
     ["Books", "Cologne", "Kitchenware", "Football Cards"],
     [],
     {
-        "src": "src=../assets/images/contact.jpg",
+        "src": "src=assets/images/contact.jpg",
         "alt": "alt=graphic image of annonymous user"
     }
 )

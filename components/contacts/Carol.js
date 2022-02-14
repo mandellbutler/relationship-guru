@@ -11,7 +11,7 @@ const Carol = new Contact (
     ["Bonnets", "Gucci Socks", "Nail Polish", "Sporting Goods"],
     [],
     {
-        "src": "src=../assets/images/contact.jpg",
+        "src": "src=assets/images/contact.jpg",
         "alt": "alt=graphic image of annonymous user"
     }
 )
