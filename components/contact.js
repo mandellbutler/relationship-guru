@@ -282,7 +282,20 @@ class Contact {
         ? alertEl.classList = "hidden" 
         : alertEl.classList = "eventAlerts"
 
-        
+        if (eventName === "Valentine's Day") {
+            if (daysTilEvent === 1) {
+                alertEl.innerHTML = `
+            ${eventName} is <span id="tilValentineAlert" class="daysTilAlerts">tomorrow</span>!
+            `} else if (daysTilEvent === 365) {
+                alertEl.classList = "eventAlerts"
+                alertEl.innerHTML = `
+            <span id="tilValentineAlert" class="daysTilAlerts">Happy ${eventName}</span>!
+            `} else { 
+                alertEl.innerHTML = `
+            <There are ${daysTilEvent} days until <span id="tilValentineAlert" class="daysTilAlerts">${eventName}</span>!
+            `
+            }
+        } 
 
     }
 
