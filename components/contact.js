@@ -316,6 +316,11 @@ class Contact {
                 alertEl.innerHTML = `
                 ${capFirst} & ${capPart}'s ${eventName} is <span id="tilAnniversaryAlert" class="daysTilAlerts">tomorrow</span>!
                 `
+            } else if (daysTilEvent === 365) {
+                alertEl.classList = "eventAlerts"
+                alertEl.innerHTML = `
+                Be sure to wish ${capFirst} & ${capPart} a very <span id="tilAnniversaryAlert" class="daysTilAlerts">Happy ${eventName}</span>!
+                `
             } 
         }
             
