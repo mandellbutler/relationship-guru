@@ -21,5 +21,4 @@ Angel.announceEvent("Birthday");
 Angel.announceEvent("Engagement Party", "March 28");
 Angel.addGifts("iPhone", "Volleyball", "Perfume", "Pokemon", "New Diary", "Bikini")
 
-console.log("Angel: ", Angel.giftIdeas)
 export default Angel;
