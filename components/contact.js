@@ -193,6 +193,21 @@ class Contact {
                 `
             }
             
+        } else if (eventName === "Christmas") {
+            if (daysTilEvent === 1) {
+                alertEl.innerHTML = `
+                Today is <span id="tilAnniversaryAlert" class="daysTilAlerts">Christmas Eve</span>!
+                `
+            } else if (daysTilEvent === 365) {
+                alertEl.classList = "eventAlerts"
+                alertEl.innerHTML = `
+                Be sure to wish ${capFirst} a very <span id="tilBdayAlert" class="daysTilAlerts">Merry ${eventName}</span>!
+                `
+            } else {
+                alertEl.innerHTML = `
+                There are <span id="tilBdayAlert" class="daysTilAlerts">${daysTilEvent}</span> days until Christmas!
+                `
+            }
         } else {
             if (daysTilEvent === 1) {
                 alertEl.innerHTML = `
