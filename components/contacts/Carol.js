@@ -4,7 +4,7 @@ const Carol = new Contact (
     4,
     "carol",
     "jacobs",
-    "wife",
+    "Wife",
     "June 23, 1986",
     "",
     "Royale Blue",
