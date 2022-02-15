@@ -32,9 +32,10 @@ class Contact {
         this.lastName = newLastName;
     };
 
-    addGifts = function (newGift) {
-        return this.giftIdeas.push(newGift);
-        
+    addGifts = function (...newGifts) {
+        newGifts.forEach((gift) => {
+            return this.giftIdeas.push(gift);
+        })
     };
 
     setAge = function () {
