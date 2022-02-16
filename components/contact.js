@@ -24,21 +24,21 @@ class Contact {
         this.image = image;
     }
 
-    updateFirstName = function (newFirstName) {
+    updateFirstName (newFirstName) {
         this.firstName = newFirstName;
     };
 
-    updateLastName = function (newLastName) {
+    updateLastName (newLastName) {
         this.lastName = newLastName;
     };
 
-    addGifts = function (...newGifts) {
+    addGifts (...newGifts) {
         newGifts.forEach((gift) => {
             return this.giftIdeas.push(gift);
         })
     };
 
-    setAge = function () {
+    setAge () {
         let now = new Date();
         let bday = new Date (this.birthdate)
         let timeSince = now - bday;
@@ -46,7 +46,7 @@ class Contact {
         return age;
     }
 
-    displayBirthday = function () {
+    displayBirthday () {
         let birthdate = new Date(this.birthdate);
         let options = { month: "long"};
         let birthMonth = new Intl.DateTimeFormat('en-US', options).format(birthdate)
@@ -65,7 +65,7 @@ class Contact {
 
     }
 
-    displayIdea = function (type) {
+    displayIdea (type) {
         //to display idea for gift
         if (type.toLowerCase() === "gift") {
             let giftIdea = this.giftIdeas[
@@ -84,7 +84,7 @@ class Contact {
     }
 
 
-    announceEvent = function (eventName, eventDate) {
+    announceEvent (eventName, eventDate) {
         //Format first letter in names to caps
         const firstName = this.firstName;
         const capFirst = firstName.charAt(0).toUpperCase() + firstName.slice(1);
@@ -230,7 +230,7 @@ class Contact {
 
     }
 
-    buildContactElement = function () {
+    buildContactElement () {
         //Format first letter in names to caps
         let firstStr = this.firstName;
         let capFirst = firstStr.charAt(0).toUpperCase() + firstStr.slice(1);

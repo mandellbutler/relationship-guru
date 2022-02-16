@@ -4,7 +4,7 @@ const Angel = new Contact (
     7,
     "angel",
     "silverstein",
-    "stylist",
+    "Stylist",
     "September 23, 1978",
     "",
     "Earth Tones",

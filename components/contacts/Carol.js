@@ -20,5 +20,6 @@ Carol.buildContactElement();
 Carol.announceEvent("Birthday");
 Carol.announceEvent("Valentine's Day");
 Carol.announceEvent("Anniversary", "March 3, 1992");
+console.log(Carol)
 
 export default Carol;
