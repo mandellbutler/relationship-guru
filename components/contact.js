@@ -216,8 +216,10 @@ class Contact {
             if (daysTilEvent === 365) {
                 alertEl.classList = "eventAlerts"
                 alertEl.innerHTML = `
-                Connection is key to a healthy relationship. Be sure to <span id="reachOutAlert" class="daysTilAlerts">${eventName}</span> to ${capFirst} today. 
+                Connection is key to any healthy relationship. Be sure to <span id="reachOutAlert" class="daysTilAlerts"> ${eventName}</span> to your ${this.relation}, ${capFirst}, today. 
                 `
+            } else {
+                alertEl.classList = "hidden"
             }
         } else {
             if (daysTilEvent === 1) {

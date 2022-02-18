@@ -18,5 +18,6 @@ const Jordan = new Contact (
 
 Jordan.buildContactElement();
 Jordan.announceEvent("Surgery Day", "March 12");
+Jordan.announceEvent("Reach Out", "February 25");
 
 export default Jordan;
