@@ -19,5 +19,6 @@ const Geene = new Contact (
 Geene.buildContactElement();
 Geene.announceEvent("Birthday");
 Geene.announceEvent("Christmas");
+Geene.announceEvent("Reach Out", "February 18");
 
 export default Geene;
